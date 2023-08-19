@@ -1,6 +1,62 @@
-# Vue 3 + TypeScript + Vite
+# iUI
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+iUI is a components portfolio made with Vue 3, TypeScript, Tailwind CSS, SASS, Vitest and Vite.
+
+## Project setup
+
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+
+```
+npm run dev
+```
+
+### Compiles and minifies for production
+
+```
+npm run build
+npm run start
+```
+
+### Run your unit tests
+
+```
+npm run test:unit
+```
+
+## Components list (WIP)
+
+- Button
+- Card
+- Checkbox
+- Chip
+- Dialog
+- Divider
+- Drawer
+- Dropdown
+- Form
+- Icon
+- Input
+- List
+- Menu
+- Modal
+- Navbar
+- Pagination
+- Progress
+- Radio
+- Select
+- Sidebar
+- Slider
+- Spinner
+- Switch
+- Table
+- Tabs
+- Textarea
+- Toast
+- Tooltip
 
 ## Recommended IDE Setup
 
