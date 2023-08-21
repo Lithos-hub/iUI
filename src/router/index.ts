@@ -1,10 +1,16 @@
 import { createRouter, createWebHistory } from "vue-router";
+import { componentsRoutes } from "./componentsRoutes";
 
 const routes = [
   {
     path: "/",
     name: "Landing",
     component: () => import("@/views/index.vue"),
+  },
+  {
+    path: "/about",
+    name: "About",
+    component: () => import("@/views/about.vue"),
   },
   {
     path: "/iui",
@@ -19,6 +25,11 @@ const routes = [
         name: "iui:summary",
         component: () => import("@/views/summary.vue"),
       },
+      ...componentsRoutes.map(({ component, path, name }) => ({
+        path,
+        name,
+        component: () => import(`@/view/${component}`),
+      })),
     ],
   },
 ];
