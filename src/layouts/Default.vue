@@ -4,8 +4,8 @@
       <Navbar />
     </header>
     <main class="flex flex-1">
-      <Sidemenu class="w-[250px] mr-[50px]" />
-      <div class="flex-1 container relative mx-auto">
+      <Sidemenu class="w-auto max-w-[250px] mr-[50px]" />
+      <div class="flex-1 container relative mx-auto text-white p-10">
         <RouterView />
       </div>
     </main>

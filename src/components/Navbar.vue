@@ -28,15 +28,15 @@
 </template>
 
 <script lang="ts" setup>
-const version = "1.5.0";
+const version = "0.1.0";
 
 const menuItems = [
   {
-    text: "Home",
-    to: "/home",
+    text: "Summary",
+    to: "/iui/summary",
   },
   {
-    text: "About",
+    text: "About iUI",
     to: "/about",
   },
 ];

@@ -21,15 +21,11 @@ const routes = [
     },
     children: [
       {
-        path: "/iui/summary",
+        path: "summary",
         name: "iui:summary",
         component: () => import("@/views/summary.vue"),
       },
-      ...componentsRoutes.map(({ component, path, name }) => ({
-        path,
-        name,
-        component: () => import(`@/view/${component}`),
-      })),
+      ...componentsRoutes,
     ],
   },
 ];

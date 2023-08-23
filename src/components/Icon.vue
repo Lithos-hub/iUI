@@ -5,10 +5,11 @@
       xmlnsXlink="http://www.w3.org/1999/xlink"
       version="1.1"
       v-bind="$attrs"
+      class="w-5 h-5 bg-red-500"
     >
       <use
         :id="icon"
-        :xlinkHref="`${icons}#${icon}`"
+        :xlink-href="linkHref"
         :fill="color"
         width="100%"
         height="100%"
@@ -18,14 +19,15 @@
 </template>
 
 <script setup lang="ts">
-import icons from "@/assets/icons/icons.svg";
+import { computed } from "vue";
+import icons from "@/assets/icons/bundle.svg";
 
 interface Props {
   icon: string;
   color: string;
 }
 
-const { color } = defineProps<Props>();
-</script>
+const { color, icon } = defineProps<Props>();
 
-<style scoped></style>
+const linkHref = computed(() => `${icons}#${icon}`);
+</script>

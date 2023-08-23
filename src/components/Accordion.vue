@@ -1,11 +1,16 @@
 <template>
   <ul>
     <li
-      class="text-white text-xl font-bold mb-3 p-5 cursor-pointer hover:bg-secondary/10 flex justify-between"
+      class="text-white text-xl font-bold mb-3 p-5 w-[250px] cursor-pointer hover:bg-secondary/10 flex justify-between uppercase"
       @click="toggle"
     >
-      {{ title }}
-      <Icon icon="chevron" color="white" class="h-8 w-8" />
+      <span class="text__gradient--primary">{{ title }}</span>
+      <!-- <Icon icon="chevron" color="white" class="h-8 w-8 text-white" /> -->
+      <Bundle
+        icon="chevron"
+        color="white"
+        :class="`h-8 w-8 transition-all ${isOpened && 'rotate-180'}`"
+      />
     </li>
     <div v-if="isOpened">
       <li v-for="{ text, to } of items">
@@ -14,7 +19,7 @@
           class="sideMenu-link flex items-center"
           active-class="bg-primary text-white"
         >
-          <span>{{ text }}</span>
+          <small>{{ text }}</small>
         </RouterLink>
       </li>
     </div>
@@ -26,7 +31,7 @@ import { ref } from "vue";
 
 import { NavegableItem } from "@/interfaces";
 
-import { Icon } from "@/components";
+import Bundle from "@/assets/icons/bundle.vue";
 
 interface Props {
   items: NavegableItem[];
