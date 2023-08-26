@@ -1,12 +1,9 @@
 <template>
-  <nav
-    class="py-3 px-10 flex justify-between bg-dark/50 backdrop-blur relative text-primary"
-  >
+  <nav class="py-3 flex justify-between backdrop-blur relative text-primary">
     <div class="flex items-center z-50">
-      <strong class="text__gradient--primary">iUI</strong>
-      <div class="py-2 px-5 ml-5 bg-primary/10 text-cyan-200 rounded-full">
+      <small class="py-2 px-5 ml-5 bg-primary/10 text-cyan-200 rounded-full">
         v{{ version }}
-      </div>
+      </small>
     </div>
     <div class="flex flex-row justify-around">
       <router-link

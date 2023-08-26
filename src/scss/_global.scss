@@ -22,16 +22,6 @@
     linear-gradient(#101010, black);
 }
 
-// Scrollbar
-
 ::-webkit-scrollbar {
-  @apply w-1;
-}
-
-::-webkit-scrollbar-track {
-  @apply bg-dark;
-}
-
-::-webkit-scrollbar-thumb {
-  @apply bg-primary hover:bg-primary/50;
+  @apply hidden;
 }

@@ -1,23 +1,22 @@
 <template>
   <ul>
     <li
-      class="text-white text-xl font-bold mb-3 p-5 w-[250px] cursor-pointer hover:bg-secondary/10 flex justify-between uppercase"
+      class="text-white text-xl font-bold p-2.5 w-full items-center cursor-pointer hover:bg-secondary/10 flex justify-evenly uppercase rounded-full"
       @click="toggle"
     >
       <span class="text__gradient--primary">{{ title }}</span>
-      <!-- <Icon icon="chevron" color="white" class="h-8 w-8 text-white" /> -->
       <Bundle
         icon="chevron"
         color="white"
-        :class="`h-8 w-8 transition-all ${isOpened && 'rotate-180'}`"
+        :class="`h-5 w-5 transition-all ${isOpened && 'rotate-180'}`"
       />
     </li>
     <div v-if="isOpened">
       <li v-for="{ text, to } of items">
         <RouterLink
           :to="to!"
-          class="sideMenu-link flex items-center"
-          active-class="bg-primary text-white"
+          class="sideMenu-link flex items-center transition-all"
+          active-class="bg-primary/10 text-white"
         >
           <small>{{ text }}</small>
         </RouterLink>
@@ -47,7 +46,7 @@ const toggle = () => (isOpened.value = !isOpened.value);
 
 <style lang="scss" scoped>
 .sideMenu-link {
-  @apply px-5 py-2.5 block font-semibold hover:bg-primary/10 hover:text-white;
+  @apply p-2 text-center block font-semibold rounded-full hover:text-white;
 }
 
 .fadeIn {

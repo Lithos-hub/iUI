@@ -1,9 +1,10 @@
 <template>
   <section class="flex flex-col gap-5">
-    <h2 class="text__gradient--primary text-3xl">Button</h2>
+    <h2 class="text-3xl font-bold">Components summary</h2>
+    <h3 class="text__gradient--primary text-2xl">Button</h3>
     <article class="flex flex-wrap gap-10">
       <Button
-        v-for="{ variant, text, disabled, size } of buttons"
+        v-for="{ variant, text, disabled, size } of BUTTONS"
         :variant="variant"
         :disabled="disabled"
         :size="size"
@@ -16,44 +17,5 @@
 
 <script setup lang="ts">
 import { Button } from "@/components";
-
-interface IButton {
-  variant?: "primary" | "secondary" | "tertiary";
-  disabled?: boolean;
-  size?: "small" | "medium" | "large";
-  text: string;
-}
-
-const buttons: IButton[] = [
-  {
-    variant: "primary",
-    text: "Button primary",
-  },
-  {
-    variant: "secondary",
-    text: "Button secondary",
-  },
-  {
-    variant: "tertiary",
-    text: "Button tertiary",
-  },
-  {
-    disabled: true,
-    text: "Button disabled",
-  },
-  {
-    size: "small",
-    text: "Button small",
-  },
-  {
-    size: "medium",
-    text: "Button medium",
-  },
-  {
-    size: "large",
-    text: "Button large",
-  },
-];
+import { BUTTONS } from "@/constants";
 </script>
-
-<style scoped></style>

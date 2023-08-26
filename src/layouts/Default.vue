@@ -1,11 +1,13 @@
 <template>
-  <div class="flex flex-col flex-grow">
-    <header class="sticky top-0 w-full z-50">
+  <div class="flex flex-col gap-5">
+    <header class="sticky top-0 w-[80vw] mx-auto z-40">
       <Navbar />
     </header>
-    <main class="flex flex-1">
-      <Sidemenu class="w-auto max-w-[250px] mr-[50px]" />
-      <div class="flex-1 container relative mx-auto text-white p-10">
+    <main class="grid grid-cols-12 gap-5 w-[80vw] mx-auto">
+      <Sidemenu class="col-span-2" />
+      <div
+        class="col-span-10 container relative h-auto text-white p-10 bg-black/50 rounded-[25px]"
+      >
         <RouterView />
       </div>
     </main>
