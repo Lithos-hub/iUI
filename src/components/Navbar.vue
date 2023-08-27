@@ -1,10 +1,9 @@
 <template>
-  <nav class="py-3 flex justify-between backdrop-blur relative text-primary">
-    <div class="flex items-center z-50">
-      <small class="py-2 px-5 ml-5 bg-primary/10 text-cyan-200 rounded-full">
-        v{{ version }}
-      </small>
-    </div>
+  <nav class="py-1 flex justify-between backdrop-blur relative text-primary">
+    <small class="py-2 px-5 ml-5 bg-primary/10 text-cyan-200 rounded-full">
+      v{{ version }}
+    </small>
+
     <div class="flex flex-row justify-around">
       <router-link
         v-for="{ text, to } of menuItems"

@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="sticky top-0 left-0 h-screen max-h-[calc(100vh-64px)] text-primary overflow-y-auto duration-200 z-10"
+    class="sticky top-0 left-0 max-h-[calc(100vh-64px)] text-primary overflow-y-auto duration-200 z-10"
   >
     <div class="fadeIn">
       <ul v-for="{ category, components } of menuItems">

@@ -1,9 +1,6 @@
 <template>
   <div class="h-screen w-screen flex flex-col justify-center items-center">
-    <h1 class="text-[200px]">
-      <span class="text-white">i</span>
-      <span class="text__gradient--primary font-semibold">UI</span>
-    </h1>
+    <h1 class="text-[200px] text__gradient--primary font-bold">iUI</h1>
     <RouterLink
       :to="{
         name: 'iui:summary',

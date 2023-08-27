@@ -2,7 +2,7 @@
   <div>
     <button
       v-bind="disabled"
-      :class="`button button__${computedVariant} button__${size}`"
+      :class="`button button__${computedColor} button__${size} button__radius--${radius} button__${variant}`"
     >
       <slot></slot>
     </button>
@@ -10,56 +10,150 @@
 </template>
 
 <script setup lang="ts">
-import { ButtonHTMLAttributes, computed } from "vue";
+import { computed } from "vue";
 
-interface Props extends /* @vue-ignore */ ButtonHTMLAttributes {
-  variant: "primary" | "secondary" | "tertiary";
-  size: "small" | "medium" | "large";
-  disabled?: boolean;
-  leftIcon?: string;
-  rightIcon?: string;
-  icon?: boolean;
-}
+import { Button } from "@/interfaces";
 
-const { variant, disabled } = withDefaults(defineProps<Props>(), {
-  variant: "primary",
+const { color, disabled, variant } = withDefaults(defineProps<Button>(), {
+  color: "primary",
   disabled: false,
-  size: "medium",
+  size: "md",
+  radius: "md",
+  variant: "solid",
 });
 
-const computedVariant = computed(() => (disabled ? "disabled" : variant));
+const computedColor = computed(() => {
+  if (disabled) return "disabled";
+  if (variant === "solid") {
+    return {
+      primary: "primary",
+      secondary: "secondary",
+      tertiary: "tertiary",
+      success: "success",
+      info: "info",
+      warning: "warning",
+      danger: "danger",
+    }[color];
+  }
+});
 </script>
 
 <style lang="scss" scoped>
 .button {
   @apply text-white rounded-md hover:opacity-90 transition-all duration-200 ease-in-out;
+
+  &__solid {
+    @apply bg-inherit border-none;
+  }
+
+  &__outline {
+    @apply border-2 border-cyan-500 bg-none;
+  }
+
+  &__ghost {
+    @apply bg-none border-2 border-primary hover:bg-primary;
+  }
+
+  &__neon {
+    @apply border-2 hover:bg-white hover:text-dark hover:font-extrabold;
+
+    box-shadow: 0px 0px 2px white, 0px 0px 5px rgb(191, 250, 255),
+      0px 0px 7px rgb(136, 255, 255), 0px 0px 8px blue, 0px 0px 12px blue;
+    text-shadow: 0px 0px 2px white, 0px 0px 7px rgb(191, 250, 255),
+      0px 0px 10px rgb(136, 255, 255), 0px 0px 15px blue, 0px 0px 25px blue;
+
+    &:hover {
+      filter: drop-shadow(0 0 20px #3eb4db);
+      text-shadow: none;
+    }
+  }
+
+  &__stealth {
+    @apply bg-primary/10 border-none text-primary hover:bg-primary/20 hover:text-white hover:brightness-125;
+  }
+
+  &__cyber {
+    @apply border-none;
+  }
+
+  &__primary {
+    @apply bg-gradient-to-tr from-cyan-500 to-indigo-600;
+  }
+
+  &__secondary {
+    @apply bg-gradient-to-tr from-rose-500 to-pink-600;
+  }
+
+  &__tertiary {
+    @apply bg-transparent border border-slate-500/40;
+  }
+
+  &__success {
+    @apply bg-success;
+  }
+
+  &__info {
+    @apply bg-info;
+  }
+
+  &__warning {
+    @apply bg-warning;
+  }
+
+  &__danger {
+    @apply bg-danger;
+  }
+
+  &__disabled {
+    @apply bg-slate-600 text-slate-400 cursor-default hover:opacity-100;
+  }
+
+  &__xs {
+    @apply px-2 py-1 text-xs;
+  }
+
+  &__sm {
+    @apply px-3 py-1.5 text-sm;
+  }
+
+  &__md {
+    @apply px-4 py-2 text-base;
+  }
+
+  &__lg {
+    @apply px-5 py-2.5 text-lg;
+  }
+
+  &__xl {
+    @apply px-8 py-3 text-lg;
+  }
+
+  &__radius--none {
+    @apply rounded-none;
+  }
+
+  &__radius--sm {
+    @apply rounded-[5px];
+  }
+
+  &__radius--md {
+    @apply rounded-[8px];
+  }
+
+  &__radius--lg {
+    @apply rounded-[12px];
+  }
+
+  &__radius--xl {
+    @apply rounded-[16px];
+  }
+
+  &__radius--full {
+    @apply rounded-full;
+  }
 }
 
-.button__primary {
-  @apply bg-primary;
-}
-
-.button__secondary {
-  @apply bg-secondary;
-}
-
-.button__tertiary {
-  @apply bg-none border;
-}
-
-.button__disabled {
-  @apply bg-slate-600 text-slate-400 cursor-default hover:opacity-100;
-}
-
-.button__small {
-  @apply px-3 py-1.5 text-sm;
-}
-
-.button__medium {
-  @apply px-4 py-2 text-base;
-}
-
-.button__large {
-  @apply px-5 py-2.5 text-lg;
+@keyframes neon {
+  // Flickr effect
 }
 </style>

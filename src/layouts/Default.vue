@@ -6,7 +6,7 @@
     <main class="grid grid-cols-12 gap-5 w-[80vw] mx-auto">
       <Sidemenu class="col-span-2" />
       <div
-        class="col-span-10 container relative h-auto text-white p-10 bg-black/50 rounded-[25px]"
+        class="col-span-10 container relative text-white p-10 bg-black/50 rounded-[25px]"
       >
         <RouterView />
       </div>
