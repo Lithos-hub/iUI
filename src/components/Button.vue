@@ -4,7 +4,7 @@
       v-bind="disabled"
       :class="`button button__${computedColor} button__${size} button__radius--${radius} button__${variant}`"
     >
-      <slot></slot>
+      <slot class="button__slot"></slot>
     </button>
   </div>
 </template>
@@ -40,7 +40,36 @@ const computedColor = computed(() => {
 
 <style lang="scss" scoped>
 .button {
-  @apply text-white rounded-md hover:opacity-90 transition-all duration-200 ease-in-out;
+  @apply text-white rounded-md hover:opacity-90 transition-all duration-200 ease-in-out active:scale-90 active:brightness-125;
+
+  // Click effect with ripple animation
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.3s ease;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s ease;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(255, 255, 255, 0.35) 0%,
+      rgba(255, 255, 255, 0) 80%
+    );
+  }
+  &:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+  }
 
   &__solid {
     @apply bg-inherit border-none;
@@ -73,7 +102,51 @@ const computedColor = computed(() => {
   }
 
   &__cyber {
-    @apply border-none;
+    @apply relative z-20 border-2 border-transparent hover:brightness-125;
+    background: linear-gradient(#101010, black) padding-box,
+      linear-gradient(
+          60deg,
+          #f79533,
+          #f37055,
+          #ef4e7b,
+          #a166ab,
+          #5073b8,
+          #1098ad,
+          #07b39b,
+          #6fba82
+        )
+        border-box;
+    animation: animatedgradient 10s alternate-reverse infinite;
+    background-size: 500% 500%;
+
+    @keyframes animatedgradient {
+      0% {
+        background-position: 0% 100%;
+      }
+      15% {
+        background-position: 10% 20%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      75% {
+        background-position: 80% 0%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  }
+
+  @keyframes wave {
+    0% {
+      transform: scale(0);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
   }
 
   &__primary {

@@ -1,13 +1,13 @@
 <template>
   <ul>
     <li
-      class="text-white text-xl font-bold p-2.5 w-full items-center cursor-pointer hover:bg-secondary/10 flex justify-evenly uppercase rounded-full"
+      class="text-xl font-bold p-2.5 px-5 w-full items-center cursor-pointer hover:bg-secondary/10 flex justify-between uppercase rounded-full"
       @click="toggle"
     >
-      <span class="text__gradient--primary">{{ title }}</span>
+      <span :class="`text-${color}-400`">{{ title }}</span>
       <Bundle
         icon="chevron"
-        color="white"
+        :color="computedIconColor"
         :class="`h-5 w-5 transition-all ${isOpened && 'rotate-180'}`"
       />
     </li>
@@ -26,22 +26,29 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { computed, ref } from "vue";
 
 import { NavegableItem } from "@/interfaces";
 
 import Bundle from "@/assets/icons/bundle.vue";
 
+import { TAILWIND_COLORS } from "@/constants";
+
 interface Props {
   items: NavegableItem[];
   title: string;
+  color: string;
 }
 
-defineProps<Props>();
+const { color } = defineProps<Props>();
 
 const isOpened = ref(false);
 
 const toggle = () => (isOpened.value = !isOpened.value);
+
+const computedIconColor = computed(
+  () => TAILWIND_COLORS[`${color}-500` as keyof typeof TAILWIND_COLORS]
+);
 </script>
 
 <style lang="scss" scoped>

@@ -1,10 +1,10 @@
 <template>
   <nav
-    class="sticky top-0 left-0 max-h-[calc(100vh-64px)] text-primary overflow-y-auto duration-200 z-10"
+    class="sticky top-0 left-0 max-h-[calc(100vh-64px)] text-primary overflow-y-auto duration-200 z-10 w-[250px] mx-auto"
   >
     <div class="fadeIn">
       <ul v-for="{ category, components } of menuItems">
-        <Accordion :items="components" :title="category" />
+        <Accordion :items="components" :title="category" color="rose" />
       </ul>
     </div>
   </nav>
