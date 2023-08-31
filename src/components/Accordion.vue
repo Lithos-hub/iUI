@@ -1,13 +1,13 @@
 <template>
   <ul>
     <li
-      class="text-xl font-bold p-2.5 px-5 w-full items-center cursor-pointer hover:bg-secondary/10 flex justify-between uppercase rounded-full"
+      class="accordion__title text-xl font-bold p-2.5 px-5 w-full items-center cursor-pointer flex justify-between uppercase rounded-full"
       @click="toggle"
     >
-      <span :class="`text-${color}-400`">{{ title }}</span>
+      <span>{{ title }}</span>
       <Bundle
         icon="chevron"
-        :color="computedIconColor"
+        :color="getTailwindHexColor"
         :class="`h-5 w-5 transition-all ${isOpened && 'rotate-180'}`"
       />
     </li>
@@ -46,14 +46,29 @@ const isOpened = ref(false);
 
 const toggle = () => (isOpened.value = !isOpened.value);
 
-const computedIconColor = computed(
+const getTailwindHexColor = computed(
   () => TAILWIND_COLORS[`${color}-500` as keyof typeof TAILWIND_COLORS]
+);
+const getHoverTextTailwindHexColor = computed(
+  () => TAILWIND_COLORS[`${color}-200` as keyof typeof TAILWIND_COLORS]
+);
+const getHoverBackgroundTailwindHexColor = computed(
+  () => `${getTailwindHexColor.value}10`
 );
 </script>
 
 <style lang="scss" scoped>
 .sideMenu-link {
   @apply p-2 text-center block font-semibold rounded-full hover:text-white;
+}
+
+.accordion__title {
+  color: v-bind(getTailwindHexColor);
+
+  &:hover {
+    color: v-bind(getHoverTextTailwindHexColor);
+    background: v-bind(getHoverBackgroundTailwindHexColor);
+  }
 }
 
 .fadeIn {

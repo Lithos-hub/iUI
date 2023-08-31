@@ -1,8 +1,8 @@
 <template>
   <nav
-    class="py-1 flex items-center justify-between backdrop-blur relative text-primary"
+    class="py-1 flex items-center bg-primary/10 justify-between backdrop-blur relative text-primary"
   >
-    <small class="py-2 px-5 ml-5 bg-primary/10 text-cyan-200 rounded-full">
+    <small class="my-1 py-1 px-2.5 ml-5 bg-primary/10 text-cyan-200 rounded-full">
       v{{ version }}
     </small>
 
@@ -10,7 +10,7 @@
       <router-link
         v-for="{ text, to } of menuItems"
         :to="to"
-        class="mx-2 my-auto text__gradient--primary hover:text-indigo-800"
+        class="mx-2 my-auto hover:text-white"
       >
         {{ text }}
       </router-link>

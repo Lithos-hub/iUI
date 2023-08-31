@@ -42,37 +42,8 @@ const computedColor = computed(() => {
 .button {
   @apply text-white rounded-md hover:opacity-90 transition-all duration-200 ease-in-out active:scale-90 active:brightness-125;
 
-  // Click effect with ripple animation
-  position: relative;
-  overflow: hidden;
-  transform: translate3d(0, 0, 0);
-  transition: all 0.3s ease;
-
-  &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    padding-top: 300%;
-    padding-left: 350%;
-    margin-left: -20px !important;
-    margin-top: -120%;
-    opacity: 0;
-    transition: all 0.8s ease;
-    background: radial-gradient(
-      ellipse at center,
-      rgba(255, 255, 255, 0.35) 0%,
-      rgba(255, 255, 255, 0) 80%
-    );
-  }
-  &:active:after {
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    transition: 0s;
-  }
-
   &__solid {
-    @apply bg-inherit border-none;
+    @apply bg-inherit;
   }
 
   &__outline {
@@ -138,17 +109,6 @@ const computedColor = computed(() => {
     }
   }
 
-  @keyframes wave {
-    0% {
-      transform: scale(0);
-      opacity: 0.5;
-    }
-    100% {
-      transform: scale(2);
-      opacity: 0;
-    }
-  }
-
   &__primary {
     @apply bg-gradient-to-tr from-cyan-500 to-indigo-600;
   }
@@ -158,7 +118,7 @@ const computedColor = computed(() => {
   }
 
   &__tertiary {
-    @apply bg-transparent border border-slate-500/40;
+    @apply bg-transparent border border-slate-500;
   }
 
   &__success {
