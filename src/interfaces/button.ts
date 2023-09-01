@@ -13,4 +13,5 @@ export interface Button extends /* @vue-ignore */ ButtonHTMLAttributes {
   size?: SizeType;
   radius?: RadiusType;
   variant?: VariantType;
+  text?: string | null;
 }

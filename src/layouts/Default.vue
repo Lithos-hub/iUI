@@ -8,7 +8,7 @@
     >
       <Sidemenu class="w-[250px]" />
       <div
-        class="w-full relative text-white p-10 bg-[#13101270] rounded-[25px]"
+        class="w-full h-full relative text-white p-10 bg-[#13101270] rounded-[25px]"
       >
         <RouterView />
       </div>

@@ -4,7 +4,8 @@
       v-bind="disabled"
       :class="`button button__${computedColor} button__${size} button__radius--${radius} button__${variant}`"
     >
-      <slot class="button__slot"></slot>
+      <slot class="button__slot" v-if="!text"></slot>
+      <span v-else>{{ text }}</span>
     </button>
   </div>
 </template>
@@ -20,6 +21,7 @@ const { color, disabled, variant } = withDefaults(defineProps<Button>(), {
   size: "md",
   radius: "md",
   variant: "solid",
+  text: null,
 });
 
 const computedColor = computed(() => {
@@ -138,7 +140,7 @@ const computedColor = computed(() => {
   }
 
   &__disabled {
-    @apply bg-slate-600 text-slate-400 cursor-default hover:opacity-100;
+    @apply bg-slate-600 text-slate-400 cursor-default hover:opacity-100 active:scale-100 active:brightness-100;
   }
 
   &__xs {

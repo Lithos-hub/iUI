@@ -2,18 +2,24 @@
   <nav
     class="py-1 flex items-center bg-primary/10 justify-between backdrop-blur relative text-primary"
   >
-    <small class="my-1 py-1 px-2.5 ml-5 bg-primary/10 text-cyan-200 rounded-full">
+    <small
+      class="my-1 py-1 px-2.5 ml-5 bg-primary/10 text-cyan-200 rounded-full"
+    >
       v{{ version }}
     </small>
 
+    <RouterLink to="/">
+      <p>iUI</p>
+    </RouterLink>
+
     <div class="flex flex-row justify-around">
-      <router-link
+      <RouterLink
         v-for="{ text, to } of menuItems"
         :to="to"
         class="mx-2 my-auto hover:text-white"
       >
         {{ text }}
-      </router-link>
+      </RouterLink>
       <a
         href="https://github.com/Lithos-hub/iCompose-v2"
         target="_blank"

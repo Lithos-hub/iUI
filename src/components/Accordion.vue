@@ -59,7 +59,7 @@ const getHoverBackgroundTailwindHexColor = computed(
 
 <style lang="scss" scoped>
 .sideMenu-link {
-  @apply p-2 pl-5 block font-semibold rounded-full hover:text-white;
+  @apply p-2 pl-5 block font-semibold hover:text-white;
 }
 
 .accordion__title {
