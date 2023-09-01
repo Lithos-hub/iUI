@@ -3,10 +3,12 @@
     <header class="sticky top-0 w-full mx-auto z-40 shadow-xl">
       <Navbar />
     </header>
-    <main class="grid grid-cols-12 gap-5 relative max-h-[calc(100vh-64px)] py-10 overflow-y-auto">
-      <Sidemenu class="col-span-2" />
+    <main
+      class="flex gap-5 relative max-h-[calc(100vh-34px)] py-10 overflow-y-auto w-[99vw] mx-auto"
+    >
+      <Sidemenu class="w-[250px]" />
       <div
-        class="col-span-10 container relative text-white p-10 bg-[#13101270] rounded-[25px]"
+        class="w-full relative text-white p-10 bg-[#13101270] rounded-[25px]"
       >
         <RouterView />
       </div>

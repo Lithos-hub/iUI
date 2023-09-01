@@ -77,6 +77,11 @@ export const componentsRoutes: RouteRecordRaw[] = [
     path: "image",
   },
   {
+    component: () => import("@/views/UI/carrousel.vue"),
+    name: "iui:carrousel",
+    path: "carrousel",
+  },
+  {
     component: () => import("@/views/UI/backtop.vue"),
     name: "iui:backtop",
     path: "backtop",

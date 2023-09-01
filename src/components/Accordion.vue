@@ -1,7 +1,7 @@
 <template>
   <ul>
     <li
-      class="accordion__title text-xl font-bold p-2.5 px-5 w-full items-center cursor-pointer flex justify-between uppercase rounded-full"
+      class="accordion__title text-xl p-2.5 px-5 w-full items-center cursor-pointer flex justify-between uppercase border-b border-primary/10"
       @click="toggle"
     >
       <span>{{ title }}</span>
@@ -59,7 +59,7 @@ const getHoverBackgroundTailwindHexColor = computed(
 
 <style lang="scss" scoped>
 .sideMenu-link {
-  @apply p-2 text-center block font-semibold rounded-full hover:text-white;
+  @apply p-2 pl-5 block font-semibold rounded-full hover:text-white;
 }
 
 .accordion__title {

@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="sticky top-0 left-0 h-full text-primary duration-200 z-10 w-[250px] mx-auto"
+    class="sticky top-0 left-0 h-full text-primary bg-[#13101270] duration-200 z-10 w-full"
   >
     <div class="fadeIn">
       <ul v-for="{ category, components } of menuItems">
@@ -118,33 +118,15 @@ const menuItems: MenuItem[] = [
         },
       },
       {
-        text: "Backtop",
+        text: "Carrousel",
         to: {
-          name: "iui:backtop",
+          name: "iui:carrousel",
         },
       },
       {
-        text: "InfiniteScroll",
+        text: "Infinite Scroll",
         to: {
           name: "iui:infinite-scroll",
-        },
-      },
-      {
-        text: "Lazyload",
-        to: {
-          name: "iui:lazyload",
-        },
-      },
-      {
-        text: "Sticky",
-        to: {
-          name: "iui:sticky",
-        },
-      },
-      {
-        text: "Affix",
-        to: {
-          name: "iui:affix",
         },
       },
     ],
@@ -207,7 +189,7 @@ const menuItems: MenuItem[] = [
         },
       },
       {
-        text: "DateTimePicker",
+        text: "DateTime Picker",
         to: {
           name: "iui:date-time-picker",
         },
@@ -225,7 +207,7 @@ const menuItems: MenuItem[] = [
         },
       },
       {
-        text: "ColorPicker",
+        text: "Color Picker",
         to: {
           name: "iui:color-picker",
         },
