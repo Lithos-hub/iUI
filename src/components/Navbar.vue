@@ -34,7 +34,7 @@
 </template>
 
 <script lang="ts" setup>
-const version = "0.1.0";
+const version = "0.1.2";
 
 const menuItems = [
   {
