@@ -1,5 +1,5 @@
 <template>
-  <div class="h-7 w-7">
+  <div class="h-10 w-10">
     <svg
       ref="svg"
       version="1.1"
