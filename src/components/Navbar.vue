@@ -8,9 +8,11 @@
       v{{ version }}
     </small>
 
-    <RouterLink to="/">
-      <p>iUI</p>
-    </RouterLink>
+    <div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+      <RouterLink to="/">
+        <p>iUI</p>
+      </RouterLink>
+    </div>
 
     <div class="flex flex-row justify-around">
       <RouterLink

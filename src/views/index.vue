@@ -1,5 +1,7 @@
 <template>
-  <div class="h-screen w-screen flex flex-col gap-10 justify-center items-center">
+  <div
+    class="h-screen w-screen flex flex-col gap-10 justify-center items-center"
+  >
     <h1
       class="text-[200px] text__gradient--primary font-bold background-motion"
     >

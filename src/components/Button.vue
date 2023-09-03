@@ -1,13 +1,10 @@
 <template>
-  <div>
-    <button
-      v-bind="disabled"
-      :class="`button button__${computedColor} button__${size} button__radius--${radius} button__${variant}`"
-    >
-      <slot class="button__slot" v-if="!text"></slot>
-      <span v-else>{{ text }}</span>
-    </button>
-  </div>
+  <button
+    :class="`button button__${computedColor} button__${size} button__radius--${radius} button__${variant}`"
+  >
+    <slot class="button__slot" v-if="!text"></slot>
+    <span v-else>{{ text }}</span>
+  </button>
 </template>
 
 <script setup lang="ts">
@@ -21,22 +18,12 @@ const { color, disabled, variant } = withDefaults(defineProps<Button>(), {
   size: "md",
   radius: "md",
   variant: "solid",
-  text: null,
+  text: "",
 });
 
 const computedColor = computed(() => {
   if (disabled) return "disabled";
-  if (variant === "solid") {
-    return {
-      primary: "primary",
-      secondary: "secondary",
-      tertiary: "tertiary",
-      success: "success",
-      info: "info",
-      warning: "warning",
-      danger: "danger",
-    }[color];
-  }
+  if (variant === "solid") return color;
 });
 </script>
 
@@ -186,9 +173,5 @@ const computedColor = computed(() => {
   &__radius--full {
     @apply rounded-full;
   }
-}
-
-@keyframes neon {
-  // Flickr effect
 }
 </style>

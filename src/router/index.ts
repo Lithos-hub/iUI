@@ -4,12 +4,12 @@ import { componentsRoutes } from "./componentsRoutes";
 const routes = [
   {
     path: "/",
-    name: "Landing",
+    name: "landing",
     component: () => import("@/views/index.vue"),
   },
   {
     path: "/about",
-    name: "About",
+    name: "about",
     component: () => import("@/views/about.vue"),
   },
   {

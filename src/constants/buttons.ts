@@ -10,7 +10,7 @@ interface ButtonComponent {
   type: string;
 }
 
-export const BUTTONS: SummaryComponent[] = [
+export const BUTTONS_SUMMARY: SummaryComponent[] = [
   {
     variant: "solid",
     text: "Button solid",

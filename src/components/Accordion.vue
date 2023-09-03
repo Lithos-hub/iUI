@@ -5,7 +5,7 @@
       @click="toggle"
     >
       <span>{{ title }}</span>
-      <Bundle
+      <Icon
         icon="chevron"
         :color="getTailwindHexColor"
         :class="`h-5 w-5 transition-all ${isOpened && 'rotate-180'}`"
@@ -29,10 +29,9 @@
 import { computed, ref } from "vue";
 
 import { NavegableItem } from "@/interfaces";
-
-import Bundle from "@/assets/icons/bundle.vue";
-
 import { TAILWIND_COLORS } from "@/constants";
+
+import { Icon } from "@/components";
 
 interface Props {
   items: NavegableItem[];

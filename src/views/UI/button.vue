@@ -30,5 +30,5 @@
 
 <script script setup lang="ts">
 import { BUTTONS_VIEW } from "@/constants";
-import Button from "@/components/Button.vue";
+import { Button } from "@/components";
 </script>
