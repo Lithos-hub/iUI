@@ -12,8 +12,14 @@
 
     <!-- ICONS -->
     <strong class="text-primary text-xl">Icons</strong>
-    <article class="flex flex-wrap justify-stretch items-center gap-10">
-      <Icon v-for="props of ICONS_SUMMARY" v-bind="props" class="w-10 h-10" />
+    <article class="flex flex-wrap items-center gap-10">
+      <div
+        class="flex flex-col gap-2.5 justify-center items-center border border-white/10 p-2 min-w-[100px]"
+        v-for="props of ICONS_SUMMARY"
+      >
+        <Icon v-bind="props" class="w-10 h-10" />
+        <span>{{ props.icon }}</span>
+      </div>
     </article>
   </section>
 </template>
