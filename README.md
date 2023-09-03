@@ -27,36 +27,51 @@ npm run start
 npm run test:unit
 ```
 
-## Components list (WIP)
+## Components list
 
-- Button
-- Card
-- Checkbox
-- Chip
-- Dialog
-- Divider
-- Drawer
-- Dropdown
-- Form
-- Icon
-- Input
-- List
-- Menu
-- Modal
-- Navbar
-- Pagination
-- Progress
-- Radio
-- Select
-- Sidebar
-- Slider
-- Spinner
-- Switch
-- Table
-- Tabs
-- Textarea
-- Toast
-- Tooltip
+| Component  | Status      |
+| ---------- | ----------- |
+| Button     | ![ReadyBtn] |
+| Icon       | ![ReadyBtn] |
+| Input      | ![WipBtn]   |
+| Select     | ![WipBtn]   |
+| Textarea   | ![WipBtn]   |
+| Checkbox   | ![WipBtn]   |
+| Radio      | ![WipBtn]   |
+| Switch     | ![WipBtn]   |
+| Slider     | ![WipBtn]   |
+| Dropdown   | ![WipBtn]   |
+| Progress   | ![WipBtn]   |
+| Spinner    | ![WipBtn]   |
+| Chip       | ![WipBtn]   |
+| Card       | ![WipBtn]   |
+| List       | ![WipBtn]   |
+| Table      | ![WipBtn]   |
+| Tabs       | ![WipBtn]   |
+| Pagination | ![WipBtn]   |
+| Modal      | ![WipBtn]   |
+| Dialog     | ![WipBtn]   |
+| Drawer     | ![WipBtn]   |
+| Sidebar    | ![WipBtn]   |
+| Navbar     | ![WipBtn]   |
+| Menu       | ![WipBtn]   |
+| Tooltip    | ![WipBtn]   |
+| Form       | ![WipBtn]   |
+| Divider    | ![WipBtn]   |
+| Badge      | ![WipBtn]   |
+| Avatar     | ![WipBtn]   |
+| Breadcrumb | ![WipBtn]   |
+| Calendar   | ![WipBtn]   |
+| Carousel   | ![WipBtn]   |
+| Collapse   | ![WipBtn]   |
+| Datepicker | ![WipBtn]   |
+| Timepicker | ![WipBtn]   |
+| Timeline   | ![WipBtn]   |
+| Upload     | ![WipBtn]   |
+| Alert      | ![WipBtn]   |
+| Loading    | ![WipBtn]   |
+| Skeleton   | ![WipBtn]   |
+| Tag        | ![WipBtn]   |
 
 ## Recommended IDE Setup
 
@@ -72,3 +87,6 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
    1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
    2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
 2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+
+[ReadyBtn]: https://img.shields.io/badge/Ready!-37a779?style=for-the-badge
+[WipBtn]: https://img.shields.io/badge/WIP-105090?style=for-the-badge
