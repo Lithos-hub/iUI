@@ -66,7 +66,7 @@ export const BADGES_VIEW: DotComponent[] = [
       },
       {
         icon: "sun",
-        dot: false
+        dot: false,
       }
     ]
   },
@@ -75,45 +75,75 @@ export const BADGES_VIEW: DotComponent[] = [
     description: `The <code>color</code> prop is used to set a color to the Badge. The default value is <code>white</code>.`,
     components_props: [
       {
-        color: "red",
+        badgeColor: "red",
         icon: "chevron"
       },
       {
-        color: "green",
+        badgeColor: "green",
         icon: "shoping-cart"
       },
       {
-        color: "blue",
+        badgeColor: "blue",
         icon: "sun"
       },
       {
-        color: "yellow",
+        badgeColor: "yellow",
         icon: "heart"
       },
       {
-        color: "pink",
+        badgeColor: "pink",
         icon: "eye"
       },
       {
-        color: "purple",
+        badgeColor: "purple",
         icon: "student"
       },
       {
-        color: "orange",
+        badgeColor: "orange",
         icon: "layers"
       },
       {
-        color: "brown",
+        badgeColor: "brown",
         icon: "layout"
       },
       {
-        color: "black",
+        badgeColor: "black",
         icon: "like"
       },
       {
-        color: "gray",
+        badgeColor: "grey",
         icon: "bulb"
       },
     ]
   },
+  {
+    type: "Content",
+    description: `The <code>content</code> prop is used to set a content to the Badge. The default value is <code>''</code>. If the <code>dot</code> prop is set to <code>true</code>, the <code>content</code> prop is ignored. If the <code>content</code> prop is above <code>9</code>, the Badge will display <code>9+</code>.`,
+    components_props: [
+      {
+        icon: "shoping-cart",
+        content: 8
+      },
+      {
+        icon: "sun",
+        content: 123
+      },
+      {
+        icon: "heart",
+        content: 123
+      },
+      {
+        icon: "eye",
+        content: 123
+      },
+      {
+        icon: "layout",
+        content: 123
+      },
+      {
+        icon: "like",
+        content: 7
+      },
+    ]
+  }
 ]
