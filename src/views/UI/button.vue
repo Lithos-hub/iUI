@@ -1,12 +1,8 @@
 <template>
   <div class="flex flex-col gap-5">
-    <h2 class="text-5xl">Button</h2>
-    <h3 class="text-xl text-gray-200">
-      The Button component is used to trigger an action or event, such as
+    <Header title="Button" description="The Button component is used to trigger an action or event, such as
       submitting a form, opening a dialog, canceling an action, or performing a
-      delete operation.
-    </h3>
-    <hr />
+      delete operation." />
     <div
       v-for="{ type, description, components_props } of BUTTONS_VIEW"
       class="flex flex-col gap-5 p-10 bg-primary/10 border border-primary/50 rounded-[25px]"
@@ -30,5 +26,5 @@
 
 <script script setup lang="ts">
 import { BUTTONS_VIEW } from "@/constants";
-import { Button } from "@/components";
+import { Button, Header } from "@/components";
 </script>

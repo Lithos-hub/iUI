@@ -1,11 +1,7 @@
 <template>
   <div class="flex flex-col gap-5">
-    <h2 class="text-5xl">Badge</h2>
-    <h3 class="text-xl text-gray-200">
-      The Badge component is used to display a small notification badge in the
-      top-right corner of an element, such as an Badge.
-    </h3>
-    <hr />
+    <Header title="Badge" description="The Badge component is used to display a small notification badge in the
+      top-right corner of an element, such as an Badge." />
     <div
       v-for="{ type, description, components_props } of BADGES_VIEW"
       class="flex flex-col gap-5 p-10 bg-primary/10 border border-primary/50 rounded-[25px]"
@@ -28,5 +24,5 @@
 
 <script script setup lang="ts">
 import { BADGES_VIEW } from "@/constants";
-import { Badge, Icon } from "@/components";
+import { Badge, Icon, Header } from "@/components";
 </script>

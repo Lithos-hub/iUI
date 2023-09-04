@@ -33,6 +33,7 @@ npm run test:unit
 | ---------- | ----------- |
 | Button     | ![ReadyBtn] |
 | Icon       | ![ReadyBtn] |
+| Badge      | ![ReadyBtn] |
 | Input      | ![WipBtn]   |
 | Select     | ![WipBtn]   |
 | Textarea   | ![WipBtn]   |
@@ -58,7 +59,6 @@ npm run test:unit
 | Tooltip    | ![WipBtn]   |
 | Form       | ![WipBtn]   |
 | Divider    | ![WipBtn]   |
-| Badge      | ![WipBtn]   |
 | Avatar     | ![WipBtn]   |
 | Breadcrumb | ![WipBtn]   |
 | Calendar   | ![WipBtn]   |

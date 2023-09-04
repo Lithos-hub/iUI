@@ -122,27 +122,27 @@ export const BADGES_VIEW: DotComponent[] = [
     components_props: [
       {
         icon: "shoping-cart",
-        content: 8
+        content: 1
       },
       {
         icon: "sun",
-        content: 123
+        content: 5
       },
       {
         icon: "heart",
-        content: 123
+        content: 8
       },
       {
         icon: "eye",
-        content: 123
+        content: 12
       },
       {
         icon: "layout",
-        content: 123
+        content: 22
       },
       {
         icon: "like",
-        content: 7
+        content: 1000
       },
     ]
   }

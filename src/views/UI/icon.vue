@@ -1,11 +1,7 @@
 <template>
   <div class="flex flex-col gap-5">
-    <h2 class="text-5xl">Icon</h2>
-    <h3 class="text-xl text-gray-200">
-      The Icon component is a wrapper around the SVG element. It allows you to
-      use SVG icons in your application easily.
-    </h3>
-    <hr />
+    <Header title="Icon" description="The Icon component is a wrapper around the SVG element. It allows you to
+      use SVG icons in your application easily." />
     <div
       v-for="{ type, description, components_props } of ICONS_VIEW"
       class="flex flex-col gap-5 p-10 bg-primary/10 border border-primary/50 rounded-[25px]"
@@ -26,5 +22,5 @@
 
 <script script setup lang="ts">
 import { ICONS_VIEW } from "@/constants";
-import { Icon } from "@/components";
+import { Icon, Header } from "@/components";
 </script>
