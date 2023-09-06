@@ -1,6 +1,6 @@
 import { Badge } from "@/interfaces";
 
-interface DotComponent {
+interface BadgeComponent {
   description: string;
   components_props: Badge[];
   type: string;
@@ -55,7 +55,7 @@ export const BADGES_SUMMARY: Badge[] = [
   },
 ];
 
-export const BADGES_VIEW: DotComponent[] = [
+export const BADGES_VIEW: BadgeComponent[] = [
   {
     type: "Dot",
     description: `The <code>dot</code> prop is used to set a dot to the Badge. The default value is <code>false</code>.`,

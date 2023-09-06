@@ -7,11 +7,7 @@ const routes = [
     name: "landing",
     component: () => import("@/views/index.vue"),
   },
-  {
-    path: "/about",
-    name: "about",
-    component: () => import("@/views/about.vue"),
-  },
+
   {
     path: "/iui",
     name: "iui",
@@ -24,6 +20,11 @@ const routes = [
         path: "summary",
         name: "iui:summary",
         component: () => import("@/views/summary.vue"),
+      },
+      {
+        path: "about",
+        name: "iui:about",
+        component: () => import("@/views/about.vue"),
       },
       ...componentsRoutes,
     ],

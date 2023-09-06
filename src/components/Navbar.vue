@@ -43,7 +43,7 @@ const menuItems = [
   },
   {
     text: "About iUI",
-    to: "/about",
+    to: "/iui/about",
   },
 ];
 </script>

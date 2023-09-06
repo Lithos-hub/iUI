@@ -1,9 +1,28 @@
 <template>
-    <div>avatar.vue component</div>
+  <div class="flex flex-col gap-5">
+    <Header
+      title="Avatar"
+      description="The Avatar component shows a text, icon or image with a specific size and full rounded shape."
+    />
+    <div
+      v-for="{ type, description, components_props } of AVATARS_VIEW"
+      class="flex flex-col gap-5 p-10 bg-primary/10 border border-primary/50 rounded-[25px]"
+    >
+      <h3 class="text-2xl text-gray-200 font-bold uppercase">{{ type }}</h3>
+      <p class="component__details--description" v-html="description" />
+
+      <div class="flex flex-col gap-5 my-5">
+        <div class="flex flex-wrap gap-5">
+          <div v-for="props of components_props" class="flex flex-col gap-5">
+            <Avatar v-bind="props" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
-<script script setup lang="ts"></script>
-
-<style scoped></style>
-
-  
+<script script setup lang="ts">
+import { AVATARS_VIEW } from "@/constants";
+import { Avatar, Header } from "@/components";
+</script>
