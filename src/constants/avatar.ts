@@ -26,7 +26,7 @@ export const AVATARS_SUMMARY: Avatar[] = [
 export const AVATARS_VIEW: AvatarComponent[] = [
   {
     type: "Icon",
-    description: `The <code>icon</code> prop is used to set an icon to the Badge. The default value is <code>undefined</code>.`,
+    description: `The <code>icon</code> prop is used to set an icon to the Avatar. The default value is <code>undefined</code>.`,
     components_props: [
       {
         icon: "chevron",
@@ -62,7 +62,7 @@ export const AVATARS_VIEW: AvatarComponent[] = [
   },
   {
     type: "Image",
-    description: `The <code>image</code> prop is used to set an image to the Badge. The default value is <code>undefined</code>.`,
+    description: `The <code>image</code> prop is used to set an image to the Avatar. The default value is <code>undefined</code>.`,
     components_props: [
       {
         image: "/dog.jpg",
@@ -71,7 +71,7 @@ export const AVATARS_VIEW: AvatarComponent[] = [
   },
   {
     type: "Color",
-    description: `The <code>color</code> prop is used to set a color to the Badge. The default value is <code>white</code>.`,
+    description: `The <code>color</code> prop is used to set a color to the Avatar. The default value is <code>white</code>.`,
     components_props: [
       {
         color: "red",
@@ -106,18 +106,18 @@ export const AVATARS_VIEW: AvatarComponent[] = [
         icon: "layout",
       },
       {
-        color: "grey",
+        color: "teal",
         icon: "like",
       },
       {
-        color: "teal",
+        color: "deep-purple",
         icon: "bulb",
       },
     ],
   },
   {
     type: "Text",
-    description: `The <code>text</code> prop is used to set a text to the Badge. The default value is <code>undefined</code>.`,
+    description: `The <code>text</code> prop is used to set a text to the Avatar. The default value is <code>undefined</code>.`,
     components_props: [
       {
         text: "CS",
@@ -163,7 +163,7 @@ export const AVATARS_VIEW: AvatarComponent[] = [
   },
   {
     type: "Size",
-    description: `The <code>size</code> prop is used to set a size to the Badge with a numeric value (number or string). The default value is <code>50</code> and the maximum is <code>80</code>.`,
+    description: `The <code>size</code> prop is used to set a size to the Avatar with a numeric value (number or string). The default value is <code>50</code> and the maximum is <code>80</code>.`,
     components_props: [
       {
         size: 10,

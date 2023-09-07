@@ -4,5 +4,4 @@ export * from './colors';
 export * from './icons';
 export * from './avatar';
 
-
 export * from './index';
