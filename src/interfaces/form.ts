@@ -1,11 +1,11 @@
 export interface MenuItem {
-  label: string;
-  value: string;
+	label: string;
+	value: string;
 }
 
 export interface NavegableItem {
-  text: string;
-  to: {
-    name: string;
-  };
+	text: string;
+	to: {
+		name: string;
+	};
 }

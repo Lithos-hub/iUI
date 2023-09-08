@@ -1,77 +1,77 @@
 <template>
-  <div
-    :class="`rounded-full relative overflow-hidden border border-slate-200/10`"
-    :style="{
-      width: `${computedSize}px`,
-      height: `${computedSize}px`,
-    }"
-  >
-    <img
-      v-if="image"
-      :src="image"
-      alt="Avatar image"
-      :width="computedSize"
-      :height="computedSize"
-      :class="`rounded-full aspect-square object-cover`"
-    />
-    <span
-      v-else
-      :class="`flex flex-col justify-center items-center w-full h-full ${computedTextSize}`"
-      :style="{
-        backgroundColor: getTailwindHexColor,
-      }"
-    >
-      <div v-if="text">
-        <span class="text-white">{{ text }}</span>
-      </div>
-      <div v-else-if="icon">
-        <Icon :icon="icon" :size="computedSize" color="white" />
-      </div>
-    </span>
-  </div>
+	<div
+		:class="`rounded-full relative overflow-hidden border border-slate-200/10`"
+		:style="{
+			width: `${computedSize}px`,
+			height: `${computedSize}px`,
+		}"
+	>
+		<img
+			v-if="image"
+			:src="image"
+			alt="Avatar image"
+			:width="computedSize"
+			:height="computedSize"
+			:class="`rounded-full aspect-square object-cover`"
+		/>
+		<span
+			v-else
+			:class="`flex flex-col justify-center items-center w-full h-full ${computedTextSize}`"
+			:style="{
+				backgroundColor: getTailwindHexColor,
+			}"
+		>
+			<div v-if="text">
+				<span class="text-white">{{ text }}</span>
+			</div>
+			<div v-else-if="icon">
+				<Icon :icon="icon" :size="computedSize" color="white" />
+			</div>
+		</span>
+	</div>
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
-import { TAILWIND_COLORS } from "@/constants";
-import { Avatar } from "@/interfaces/avatar";
-import { Icon } from "@/components";
+import { computed } from 'vue';
+import { TAILWIND_COLORS } from '@/constants';
+import { Avatar } from '@/interfaces/avatar';
+import { Icon } from '@/components';
 
 const { image, color, size, icon, text } = withDefaults(defineProps<Avatar>(), {
-  color: "blue",
-  size: 30,
+	color: 'blue',
+	size: 30,
 });
 
 const computedSize = computed(() => {
-  if (Number(size) <= 80) return Number(size) * 2;
+	if (Number(size) <= 80) return Number(size) * 2;
 
-  return Number(size);
+	return Number(size);
 });
 
 const getTailwindHexColor = computed(
-  () => TAILWIND_COLORS[`${color}-700` as keyof typeof TAILWIND_COLORS]
+	() => TAILWIND_COLORS[`${color}-700` as keyof typeof TAILWIND_COLORS],
 );
 
 const computedTextSize = computed(() => {
-  switch (size) {
-    case 10:
-      return "text-xs";
-    case 20:
-      return "text-sm";
-    case 30:
-      return "text-base";
-    case 40:
-      return "text-lg";
-    case 50:
-      return "text-2xl";
-    case 60:
-      return "text-2xl";
-    case 70:
-      return "text-3xl";
-    case 80:
-      return "text-4xl";
-    default:
-      return "text-base";
-  }
+	switch (size) {
+		case 10:
+			return 'text-xs';
+		case 20:
+			return 'text-sm';
+		case 30:
+			return 'text-base';
+		case 40:
+			return 'text-lg';
+		case 50:
+			return 'text-2xl';
+		case 60:
+			return 'text-2xl';
+		case 70:
+			return 'text-3xl';
+		case 80:
+			return 'text-4xl';
+		default:
+			return 'text-base';
+	}
 });
 </script>
