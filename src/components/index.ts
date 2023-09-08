@@ -5,5 +5,6 @@ export { default as Button } from './Button.vue';
 export { default as Icon } from './Icon.vue';
 export { default as Badge } from './Badge.vue';
 export { default as Avatar } from './Avatar.vue';
+export { default as ComponentDescription } from './ComponentDescription.vue';
 
 export * from './details';

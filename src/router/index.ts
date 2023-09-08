@@ -19,12 +19,12 @@ const routes = [
 			{
 				path: 'summary',
 				name: 'iui:summary',
-				component: () => import('@/views/summary.vue'),
+				component: () => import('@/views/summaryView.vue'),
 			},
 			{
 				path: 'about',
 				name: 'iui:about',
-				component: () => import('@/views/about.vue'),
+				component: () => import('@/views/aboutView.vue'),
 			},
 			...componentsRoutes,
 		],

@@ -124,39 +124,39 @@ export const AVATARS_VIEW: AvatarComponent[] = [
 				color: 'red',
 			},
 			{
-				text: 'CS',
+				text: 'LA',
 				color: 'green',
 			},
 			{
-				text: 'CS',
+				text: 'PM',
 				color: 'blue',
 			},
 			{
-				text: 'CS',
+				text: 'TR',
 				color: 'yellow',
 			},
 			{
-				text: 'CS',
+				text: 'CN',
 				color: 'pink',
 			},
 			{
-				text: 'CS',
+				text: 'AS',
 				color: 'purple',
 			},
 			{
-				text: 'CS',
+				text: 'EW',
 				color: 'orange',
 			},
 			{
-				text: 'CS',
+				text: 'PM',
 				color: 'brown',
 			},
 			{
-				text: 'CS',
+				text: 'SE',
 				color: 'grey',
 			},
 			{
-				text: 'CS',
+				text: 'YT',
 				color: 'teal',
 			},
 		],

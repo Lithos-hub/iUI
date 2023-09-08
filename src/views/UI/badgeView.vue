@@ -11,7 +11,8 @@
 			class="flex flex-col gap-5 p-10 bg-primary/10 border border-primary/50 rounded-[25px]"
 		>
 			<h3 class="text-2xl text-gray-200 font-bold uppercase">{{ type }}</h3>
-			<p class="component__details--description" v-html="description" />
+
+			<ComponentDescription :description="description" />
 
 			<div class="flex flex-col gap-5 my-5">
 				<div class="flex flex-wrap gap-5">
@@ -32,5 +33,5 @@
 
 <script script setup lang="ts">
 import { BADGES_VIEW } from '@/constants';
-import { Badge, Icon, Header } from '@/components';
+import { Badge, Icon, Header, ComponentDescription } from '@/components';
 </script>
