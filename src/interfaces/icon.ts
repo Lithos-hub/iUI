@@ -1,4 +1,4 @@
-import { IconName } from '@/components/Icon.vue';
+import { IconName } from '@/components/iUI/iUIIcon.vue';
 import type { ColorName } from '.';
 
 export interface Icon {

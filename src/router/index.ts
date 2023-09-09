@@ -5,13 +5,13 @@ const routes = [
 	{
 		path: '/',
 		name: 'landing',
-		component: () => import('@/views/index.vue'),
+		component: () => import('@/views/indexView.vue'),
 	},
 
 	{
 		path: '/iui',
 		name: 'iui',
-		component: () => import('@/layouts/Default.vue'),
+		component: () => import('@/layouts/DefaultLayout.vue'),
 		redirect: {
 			name: 'iui:summary',
 		},

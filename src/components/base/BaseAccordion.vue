@@ -12,7 +12,7 @@
 			/>
 		</li>
 		<div v-if="isOpened">
-			<li v-for="{ text, to } of items">
+			<li v-for="({ text, to }, i) of items" :key="i">
 				<RouterLink
 					:to="to!"
 					class="sideMenu-link flex items-center transition-all"
@@ -28,7 +28,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 
-import { NavegableItem } from '@/interfaces';
+import { ColorName, NavegableItem } from '@/interfaces';
 import { TAILWIND_COLORS } from '@/constants';
 
 import { Icon } from '@/components';
@@ -46,7 +46,10 @@ const isOpened = ref(false);
 const toggle = () => (isOpened.value = !isOpened.value);
 
 const getTailwindHexColor = computed(
-	() => TAILWIND_COLORS[`${color}-500` as keyof typeof TAILWIND_COLORS],
+	() =>
+		TAILWIND_COLORS[
+			`${color}-500` as keyof typeof TAILWIND_COLORS
+		] as ColorName,
 );
 const getHoverTextTailwindHexColor = computed(
 	() => TAILWIND_COLORS[`${color}-200` as keyof typeof TAILWIND_COLORS],

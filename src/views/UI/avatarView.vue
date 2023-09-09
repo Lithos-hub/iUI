@@ -1,6 +1,6 @@
 <template>
 	<div class="flex flex-col gap-5">
-		<Header
+		<DetailsHeader
 			title="Avatar"
 			description="The Avatar component shows a text, icon or image with a specific size and full rounded shape."
 		/>
@@ -29,5 +29,5 @@
 
 <script script setup lang="ts">
 import { AVATARS_VIEW } from '@/constants';
-import { Avatar, Header, ComponentDescription } from '@/components';
+import { Avatar, DetailsHeader, ComponentDescription } from '@/components';
 </script>

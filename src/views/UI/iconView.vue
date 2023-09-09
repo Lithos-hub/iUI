@@ -1,6 +1,6 @@
 <template>
 	<div class="flex flex-col gap-5">
-		<Header
+		<DetailsHeader
 			title="Icon"
 			description="The Icon component is a wrapper around the SVG element. It allows you to
       use SVG icons in your application easily."
@@ -31,5 +31,5 @@
 
 <script script setup lang="ts">
 import { ICONS_VIEW } from '@/constants';
-import { Icon, Header, ComponentDescription } from '@/components';
+import { Icon, DetailsHeader, ComponentDescription } from '@/components';
 </script>

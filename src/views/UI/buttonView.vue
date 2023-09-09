@@ -1,6 +1,6 @@
 <template>
 	<div class="flex flex-col gap-5">
-		<Header
+		<DetailsHeader
 			title="Button"
 			description="The Button component is used to trigger an action or event, such as
       submitting a form, opening a dialog, canceling an action, or performing a
@@ -32,5 +32,5 @@
 
 <script script setup lang="ts">
 import { BUTTONS_VIEW } from '@/constants';
-import { Button, Header, ComponentDescription } from '@/components';
+import { Button, DetailsHeader, ComponentDescription } from '@/components';
 </script>

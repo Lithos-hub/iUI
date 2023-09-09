@@ -5,7 +5,7 @@
 				:class="`badge ${dot ? 'badge__dotted' : ''}`"
 				:style="{ background: getTailwindHexColor }"
 			>
-				<div class="text-sm" v-if="!dot && content">
+				<div v-if="!dot && content" class="text-sm">
 					<small>{{ getFormattedContent }}</small>
 				</div>
 			</div>

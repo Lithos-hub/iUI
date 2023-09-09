@@ -2,7 +2,7 @@
 	<button
 		:class="`button button__${computedColor} button__${size} button__radius--${radius} button__${variant}`"
 	>
-		<slot class="button__slot" v-if="!text"></slot>
+		<slot v-if="!text" class="button__slot"></slot>
 		<span v-else>{{ text }}</span>
 	</button>
 </template>
@@ -24,6 +24,7 @@ const { color, disabled, variant } = withDefaults(defineProps<Button>(), {
 const computedColor = computed(() => {
 	if (disabled) return 'disabled';
 	if (variant === 'solid') return color;
+	else return 'white';
 });
 </script>
 

@@ -1,10 +1,10 @@
 <template>
 	<div class="h-10 w-10">
 		<svg
+			id="bundle"
 			ref="svg"
 			version="1.1"
 			xmlns="http://www.w3.org/2000/svg"
-			id="bundle"
 			viewBox="0 0 24 24"
 		></svg>
 	</div>

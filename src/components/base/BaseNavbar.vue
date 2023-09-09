@@ -16,7 +16,8 @@
 
 		<div class="flex flex-row justify-around">
 			<RouterLink
-				v-for="{ text, to } of menuItems"
+				v-for="({ text, to }, i) of menuItems"
+				:key="i"
 				:to="to"
 				class="mx-2 my-auto hover:text-white"
 			>
