@@ -12,13 +12,14 @@
 
 <script lang="ts" setup>
 import { Accordion } from '@/components';
+import { ComponentsRouteName } from '@/router/componentsRoutes';
 
 interface MenuItem {
 	category: string;
 	components: {
 		text: string;
 		to: {
-			name: string;
+			name: ComponentsRouteName;
 		};
 	}[];
 }
@@ -94,21 +95,9 @@ const menuItems: MenuItem[] = [
 				},
 			},
 			{
-				text: 'Drawer',
-				to: {
-					name: 'iui:drawer',
-				},
-			},
-			{
 				text: 'Collapse',
 				to: {
 					name: 'iui:collapse',
-				},
-			},
-			{
-				text: 'Timeline',
-				to: {
-					name: 'iui:timeline',
 				},
 			},
 			{
@@ -127,6 +116,47 @@ const menuItems: MenuItem[] = [
 				text: 'Infinite Scroll',
 				to: {
 					name: 'iui:infinite-scroll',
+				},
+			},
+		],
+	},
+	{
+		category: 'Navigation',
+		components: [
+			{
+				text: 'Menu',
+				to: {
+					name: 'iui:menu',
+				},
+			},
+			{
+				text: 'Tabs',
+				to: {
+					name: 'iui:tabs',
+				},
+			},
+			{
+				text: 'Breadcrumb',
+				to: {
+					name: 'iui:breadcrumb',
+				},
+			},
+			{
+				text: 'Pagination',
+				to: {
+					name: 'iui:pagination',
+				},
+			},
+			{
+				text: 'Steps',
+				to: {
+					name: 'iui:steps',
+				},
+			},
+			{
+				text: 'Timeline',
+				to: {
+					name: 'iui:timeline',
 				},
 			},
 		],

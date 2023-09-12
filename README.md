@@ -29,49 +29,55 @@ npm run test:unit
 
 ## Components list
 
-| Component  | Status      |
-| ---------- | ----------- |
-| Button     | ![ReadyBtn] |
-| Icon       | ![ReadyBtn] |
-| Badge      | ![ReadyBtn] |
-| Input      | ![WipBtn]   |
-| Select     | ![WipBtn]   |
-| Textarea   | ![WipBtn]   |
-| Checkbox   | ![WipBtn]   |
-| Radio      | ![WipBtn]   |
-| Switch     | ![WipBtn]   |
-| Slider     | ![WipBtn]   |
-| Dropdown   | ![WipBtn]   |
-| Progress   | ![WipBtn]   |
-| Spinner    | ![WipBtn]   |
-| Chip       | ![WipBtn]   |
-| Card       | ![WipBtn]   |
-| List       | ![WipBtn]   |
-| Table      | ![WipBtn]   |
-| Tabs       | ![WipBtn]   |
-| Pagination | ![WipBtn]   |
-| Modal      | ![WipBtn]   |
-| Dialog     | ![WipBtn]   |
-| Drawer     | ![WipBtn]   |
-| Sidebar    | ![WipBtn]   |
-| Navbar     | ![WipBtn]   |
-| Menu       | ![WipBtn]   |
-| Tooltip    | ![WipBtn]   |
-| Form       | ![WipBtn]   |
-| Divider    | ![WipBtn]   |
-| Avatar     | ![WipBtn]   |
-| Breadcrumb | ![WipBtn]   |
-| Calendar   | ![WipBtn]   |
-| Carousel   | ![WipBtn]   |
-| Collapse   | ![WipBtn]   |
-| Datepicker | ![WipBtn]   |
-| Timepicker | ![WipBtn]   |
-| Timeline   | ![WipBtn]   |
-| Upload     | ![WipBtn]   |
-| Alert      | ![WipBtn]   |
-| Loading    | ![WipBtn]   |
-| Skeleton   | ![WipBtn]   |
-| Tag        | ![WipBtn]   |
+| Component (UI) | Status      |
+| -------------- | ----------- |
+| Button         | ![ReadyBtn] |
+| Icon           | ![ReadyBtn] |
+| Badge          | ![ReadyBtn] |
+| Avatar         | ![ReadyBtn] |
+| Progress       | ![WipBtn]   |
+| Spinner        | ![WipBtn]   |
+| Chip           | ![WipBtn]   |
+| Card           | ![WipBtn]   |
+| List           | ![WipBtn]   |
+| Table          | ![WipBtn]   |
+| Modal          | ![WipBtn]   |
+| Dialog         | ![WipBtn]   |
+| Tooltip        | ![WipBtn]   |
+| Divider        | ![WipBtn]   |
+| Calendar       | ![WipBtn]   |
+| Carousel       | ![WipBtn]   |
+| Collapse       | ![WipBtn]   |
+| Upload         | ![WipBtn]   |
+| Alert          | ![WipBtn]   |
+| Loading        | ![WipBtn]   |
+| Skeleton       | ![WipBtn]   |
+| Tag            | ![WipBtn]   |
+
+| Component (Navigation) | Status    |
+| ---------------------- | --------- |
+| Navbar                 | ![WipBtn] |
+| Sidebar                | ![WipBtn] |
+| Menu                   | ![WipBtn] |
+| Breadcrumb             | ![WipBtn] |
+| Pagination             | ![WipBtn] |
+| Tabs                   | ![WipBtn] |
+| Steps                  | ![WipBtn] |
+| Timeline               | ![WipBtn] |
+
+| Component (Form) | Status    |
+| ---------------- | --------- |
+| Input            | ![WipBtn] |
+| Select           | ![WipBtn] |
+| Textarea         | ![WipBtn] |
+| Checkbox         | ![WipBtn] |
+| Radio            | ![WipBtn] |
+| Switch           | ![WipBtn] |
+| Slider           | ![WipBtn] |
+| Dropdown         | ![WipBtn] |
+| Datepicker       | ![WipBtn] |
+| Timepicker       | ![WipBtn] |
+| Form             | ![WipBtn] |
 
 ## Recommended IDE Setup
 

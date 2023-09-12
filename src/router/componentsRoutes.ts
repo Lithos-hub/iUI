@@ -1,6 +1,5 @@
-import { RouteRecordRaw } from 'vue-router';
-
-export const componentsRoutes: RouteRecordRaw[] = [
+export const componentsRoutes = [
+	// **** UI **** //
 	{
 		component: () => import('@/views/UI/buttonView.vue'),
 		name: 'iui:button',
@@ -57,19 +56,9 @@ export const componentsRoutes: RouteRecordRaw[] = [
 		path: 'popover',
 	},
 	{
-		component: () => import('@/views/UI/drawerView.vue'),
-		name: 'iui:drawer',
-		path: 'drawer',
-	},
-	{
 		component: () => import('@/views/UI/collapseView.vue'),
 		name: 'iui:collapse',
 		path: 'collapse',
-	},
-	{
-		component: () => import('@/views/UI/timelineView.vue'),
-		name: 'iui:timeline',
-		path: 'timeline',
 	},
 	{
 		component: () => import('@/views/UI/imageView.vue'),
@@ -106,6 +95,53 @@ export const componentsRoutes: RouteRecordRaw[] = [
 		name: 'iui:affix',
 		path: 'affix',
 	},
+	// **** NAVIGATION **** //
+	{
+		component: () => import('@/views/NAVIGATION/drawerView.vue'),
+		name: 'iui:drawer',
+		path: 'drawer',
+	},
+	{
+		component: () => import('@/views/NAVIGATION/navbarView.vue'),
+		name: 'iui:navbar',
+		path: 'navbar',
+	},
+	{
+		component: () => import('@/views/NAVIGATION/sidebarView.vue'),
+		name: 'iui:sidebar',
+		path: 'sidebar',
+	},
+	{
+		component: () => import('@/views/NAVIGATION/menuView.vue'),
+		name: 'iui:menu',
+		path: 'menu',
+	},
+	{
+		component: () => import('@/views/NAVIGATION/breadcrumbView.vue'),
+		name: 'iui:breadcrumb',
+		path: 'breadcrumb',
+	},
+	{
+		component: () => import('@/views/NAVIGATION/paginationView.vue'),
+		name: 'iui:pagination',
+		path: 'pagination',
+	},
+	{
+		component: () => import('@/views/NAVIGATION/tabsView.vue'),
+		name: 'iui:tabs',
+		path: 'tabs',
+	},
+	{
+		component: () => import('@/views/NAVIGATION/stepsView.vue'),
+		name: 'iui:steps',
+		path: 'steps',
+	},
+	{
+		component: () => import('@/views/NAVIGATION/timelineView.vue'),
+		name: 'iui:timeline',
+		path: 'timeline',
+	},
+	// **** FORM **** //
 	{
 		component: () => import('@/views/FORM/inputView.vue'),
 		name: 'iui:input',
@@ -181,4 +217,12 @@ export const componentsRoutes: RouteRecordRaw[] = [
 		name: 'iui:form',
 		path: 'form',
 	},
-];
+] as const;
+
+type ElementType<T extends ReadonlyArray<unknown>> = T extends ReadonlyArray<
+	infer ElementType
+>
+	? ElementType
+	: never;
+
+export type ComponentsRouteName = ElementType<typeof componentsRoutes>['name'];
