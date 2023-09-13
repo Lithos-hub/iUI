@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted, computed } from 'vue';
-import { Icon } from '@/interfaces';
+import { Icon } from './iui-icon.interfaces';
 
 const { icon, color } = withDefaults(defineProps<Icon>(), {
 	color: 'white',

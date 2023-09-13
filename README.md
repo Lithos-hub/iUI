@@ -48,7 +48,6 @@ npm run test:unit
 | Calendar       | ![WipBtn]   |
 | Carousel       | ![WipBtn]   |
 | Collapse       | ![WipBtn]   |
-| Upload         | ![WipBtn]   |
 | Alert          | ![WipBtn]   |
 | Loading        | ![WipBtn]   |
 | Skeleton       | ![WipBtn]   |
@@ -77,6 +76,7 @@ npm run test:unit
 | Dropdown         | ![WipBtn] |
 | Datepicker       | ![WipBtn] |
 | Timepicker       | ![WipBtn] |
+| Upload           | ![WipBtn] |
 | Form             | ![WipBtn] |
 
 ## Recommended IDE Setup

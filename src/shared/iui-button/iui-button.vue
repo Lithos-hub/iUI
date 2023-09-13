@@ -10,7 +10,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-import { Button } from '@/interfaces';
+import { Button } from './iui-button.interfaces';
 
 const { color, disabled, variant } = withDefaults(defineProps<Button>(), {
 	color: 'primary',
@@ -185,3 +185,4 @@ const computedColor = computed(() => {
 	}
 }
 </style>
+./iui-button.interfaces

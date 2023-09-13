@@ -31,7 +31,7 @@ import { computed, ref } from 'vue';
 import { ColorName, NavegableItem } from '@/interfaces';
 import { TAILWIND_COLORS } from '@/constants';
 
-import { Icon } from '@/components';
+import Icon from '@/shared/iui-icon/iui-icon.vue';
 
 interface Props {
 	items: NavegableItem[];

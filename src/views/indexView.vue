@@ -21,5 +21,5 @@
 </template>
 
 <script setup lang="ts">
-import { Button } from '@/components';
+import Button from '@/shared/iui-button/iui-button.vue';
 </script>

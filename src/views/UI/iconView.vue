@@ -31,5 +31,7 @@
 
 <script script setup lang="ts">
 import { ICONS_VIEW } from '@/constants';
-import { Icon, DetailsHeader, ComponentDescription } from '@/components';
+import { DetailsHeader, ComponentDescription } from '@/components';
+
+import Icon from '@/shared/iui-icon/iui-icon.vue';
 </script>

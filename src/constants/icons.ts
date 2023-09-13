@@ -1,4 +1,4 @@
-import { Icon } from '@/interfaces';
+import { Icon } from '@/shared/iui-icon/iui-icon.interfaces';
 
 interface IconComponent {
 	description: string;
@@ -117,7 +117,7 @@ export const ICONS_VIEW: IconComponent[] = [
 				icon: 'like',
 			},
 			{
-				color: 'gray',
+				color: 'grey',
 				icon: 'bulb',
 			},
 		],

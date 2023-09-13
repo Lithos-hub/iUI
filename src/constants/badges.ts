@@ -1,4 +1,4 @@
-import { Badge } from '@/interfaces';
+import { Badge } from '@/shared/iui-badge/iui-badge.interfaces';
 
 interface BadgeComponent {
 	description: string;

@@ -29,5 +29,7 @@
 
 <script script setup lang="ts">
 import { AVATARS_VIEW } from '@/constants';
-import { Avatar, DetailsHeader, ComponentDescription } from '@/components';
+import { DetailsHeader, ComponentDescription } from '@/components';
+
+import Avatar from '@/shared/iui-avatar/iui-avatar.vue';
 </script>

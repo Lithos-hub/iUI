@@ -1,4 +1,4 @@
-import { Avatar } from '@/interfaces';
+import { Avatar } from '@/shared/iui-avatar/iui-avatar.interfaces';
 
 interface AvatarComponent {
 	description: string;

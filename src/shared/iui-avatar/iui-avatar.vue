@@ -34,8 +34,9 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { TAILWIND_COLORS } from '@/constants';
-import { Avatar } from '@/interfaces/avatar';
-import { Icon } from '@/components';
+
+import { Avatar } from './iui-avatar.interfaces';
+import Icon from '@/shared/iui-icon/iui-icon.vue';
 
 const { image, color, size, icon, text } = withDefaults(defineProps<Avatar>(), {
 	color: 'blue',

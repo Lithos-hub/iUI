@@ -32,5 +32,7 @@
 
 <script script setup lang="ts">
 import { BUTTONS_VIEW } from '@/constants';
-import { Button, DetailsHeader, ComponentDescription } from '@/components';
+import { DetailsHeader, ComponentDescription } from '@/components';
+
+import Button from '@/shared/iui-button/iui-button.vue';
 </script>

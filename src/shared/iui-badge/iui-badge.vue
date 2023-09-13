@@ -17,7 +17,8 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { TAILWIND_COLORS } from '@/constants';
-import { Badge } from '@/interfaces';
+
+import { Badge } from './iui-badge.interfaces';
 
 const { badgeColor, dot, content } = withDefaults(defineProps<Badge>(), {
 	badgeColor: 'red',

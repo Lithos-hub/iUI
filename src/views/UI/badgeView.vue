@@ -33,5 +33,8 @@
 
 <script script setup lang="ts">
 import { BADGES_VIEW } from '@/constants';
-import { Badge, Icon, DetailsHeader, ComponentDescription } from '@/components';
+import { DetailsHeader, ComponentDescription } from '@/components';
+
+import Badge from '@/shared/iui-badge/iui-badge.vue';
+import Icon from '@/shared/iui-icon/iui-icon.vue';
 </script>

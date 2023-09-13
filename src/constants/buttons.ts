@@ -1,4 +1,4 @@
-import { Button } from '@/interfaces';
+import { Button } from '@/shared/iui-button/iui-button.interfaces';
 
 interface SummaryComponent extends Button {
 	text: string;
