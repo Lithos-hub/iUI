@@ -219,9 +219,7 @@ export const componentsRoutes = [
 	},
 ] as const;
 
-type ElementType<T extends ReadonlyArray<unknown>> = T extends ReadonlyArray<
-	infer ElementType
->
+type ElementType<T extends ReadonlyArray<unknown>> = T extends ReadonlyArray<infer ElementType>
 	? ElementType
 	: never;
 

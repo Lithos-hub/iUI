@@ -1,7 +1,6 @@
 <template>
 	<button
-		:class="`button button__${computedColor} button__${size} button__radius--${radius} button__${variant}`"
-	>
+		:class="`button button__${computedColor} button__${size} button__radius--${radius} button__${variant}`">
 		<slot v-if="!text" class="button__slot"></slot>
 		<span v-else>{{ text }}</span>
 	</button>
@@ -74,17 +73,7 @@ const computedColor = computed(() => {
 		@apply relative z-20 border-2 border-transparent hover:brightness-125;
 		background:
 			linear-gradient(#101010, black) padding-box,
-			linear-gradient(
-					60deg,
-					#f79533,
-					#f37055,
-					#ef4e7b,
-					#a166ab,
-					#5073b8,
-					#1098ad,
-					#07b39b,
-					#6fba82
-				)
+			linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82)
 				border-box;
 		animation: animatedgradient 10s alternate-reverse infinite;
 		background-size: 500% 500%;

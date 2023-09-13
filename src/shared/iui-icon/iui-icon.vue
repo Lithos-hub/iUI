@@ -5,8 +5,7 @@
 			ref="svg"
 			version="1.1"
 			xmlns="http://www.w3.org/2000/svg"
-			viewBox="0 0 24 24"
-		></svg>
+			viewBox="0 0 24 24"></svg>
 	</div>
 </template>
 
@@ -65,9 +64,5 @@ const icons = computed(() => ({
 
 export type IconName = keyof typeof icons.value;
 
-onMounted(
-	() =>
-		(svg.value!.innerHTML =
-			icons.value[icon as keyof typeof icons.value].path()),
-);
+onMounted(() => (svg.value!.innerHTML = icons.value[icon as keyof typeof icons.value].path()));
 </script>

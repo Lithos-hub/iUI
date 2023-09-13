@@ -16,8 +16,7 @@
 			<div
 				v-for="(props, j) of ICONS_SUMMARY"
 				:key="j"
-				class="flex flex-col gap-2.5 justify-center items-center border border-white/10 p-2 min-w-[100px]"
-			>
+				class="flex flex-col gap-2.5 justify-center items-center border border-white/10 p-2 min-w-[100px]">
 				<Icon v-bind="props" class="w-10 h-10" />
 				<span>{{ props.icon }}</span>
 			</div>

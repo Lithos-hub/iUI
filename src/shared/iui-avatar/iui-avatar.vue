@@ -4,23 +4,20 @@
 		:style="{
 			width: `${computedSize}px`,
 			height: `${computedSize}px`,
-		}"
-	>
+		}">
 		<img
 			v-if="image"
 			:src="image"
 			alt="Avatar image"
 			:width="computedSize"
 			:height="computedSize"
-			:class="`rounded-full aspect-square object-cover`"
-		/>
+			:class="`rounded-full aspect-square object-cover`"/>
 		<span
 			v-else
 			:class="`flex flex-col justify-center items-center w-full h-full ${computedTextSize}`"
 			:style="{
 				backgroundColor: getTailwindHexColor,
-			}"
-		>
+			}">
 			<div v-if="text">
 				<span class="text-white">{{ text }}</span>
 			</div>

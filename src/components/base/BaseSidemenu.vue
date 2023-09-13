@@ -1,7 +1,5 @@
 <template>
-	<nav
-		class="sticky top-0 left-0 h-full text-primary bg-[#13101270] duration-200 z-10 w-full"
-	>
+	<nav class="sticky top-0 left-0 h-full text-primary bg-[#13101270] duration-200 z-10 w-full">
 		<div class="fadeIn">
 			<ul v-for="({ category, components }, i) of menuItems" :key="i">
 				<Accordion :items="components" :title="category" color="blue" />

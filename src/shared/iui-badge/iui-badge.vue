@@ -3,8 +3,7 @@
 		<div class="relative">
 			<div
 				:class="`badge ${dot ? 'badge__dotted' : ''}`"
-				:style="{ background: getTailwindHexColor }"
-			>
+				:style="{ background: getTailwindHexColor }">
 				<div v-if="!dot && content" class="text-sm">
 					<small>{{ getFormattedContent }}</small>
 				</div>

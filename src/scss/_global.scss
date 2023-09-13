@@ -10,16 +10,8 @@ body {
 			rgba(17, 168, 130, 0.027),
 			transparent 1000px
 		),
-		radial-gradient(
-			farthest-corner at 45% 50%,
-			rgba(183, 0, 255, 0.068),
-			transparent 1000px
-		),
-		radial-gradient(
-			farthest-corner at 95% 0%,
-			rgba(0, 110, 255, 0.041),
-			transparent 1000px
-		),
+		radial-gradient(farthest-corner at 45% 50%, rgba(183, 0, 255, 0.068), transparent 1000px),
+		radial-gradient(farthest-corner at 95% 0%, rgba(0, 110, 255, 0.041), transparent 1000px),
 		linear-gradient(#010101, black);
 }
 

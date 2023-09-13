@@ -17,4 +17,7 @@ module.exports = {
 		'eslint-config-prettier',
 	],
 	plugins: ['@typescript-eslint', 'prettier'],
+	rules: {
+		'vue/html-closing-bracket-newline': [2, { multiline: 'never' }],
+	},
 };
