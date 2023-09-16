@@ -33,6 +33,9 @@
 </template>
 
 <script setup lang="ts">
-import { Button, Icon, Badge } from '@/components';
+import Button from '@/shared/iui-button/iui-button.vue';
+import Badge from '@/shared/iui-badge/iui-badge.vue';
+import Icon from '@/shared/iui-icon/iui-icon.vue';
+
 import { BUTTONS_SUMMARY, ICONS_SUMMARY, BADGES_SUMMARY } from '@/constants';
 </script>
