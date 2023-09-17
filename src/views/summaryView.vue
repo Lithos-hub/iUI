@@ -29,6 +29,18 @@
 				<Icon v-bind="props" class="w-10 h-10" />
 			</Badge>
 		</article>
+
+		<!-- AVATARS -->
+		<strong class="text-primary text-xl">Avatars</strong>
+		<article class="flex flex-wrap items-center gap-10">
+			<Avatar v-for="(props, y) of AVATARS_SUMMARY" :key="y" v-bind="props" class="w-10 h-10" />
+		</article>
+
+		<!-- DIVIDERS -->
+		<strong class="text-primary text-xl">Dividers</strong>
+		<article class="flex flex-col">
+			<Divider v-for="(props, z) of DIVIDER_SUMMARY" :key="z" v-bind="props" />
+		</article>
 	</section>
 </template>
 
@@ -36,6 +48,14 @@
 import Button from '@/shared/iui-button/iui-button.vue';
 import Badge from '@/shared/iui-badge/iui-badge.vue';
 import Icon from '@/shared/iui-icon/iui-icon.vue';
+import Avatar from '@/shared/iui-avatar/iui-avatar.vue';
+import Divider from '@/shared/iui-divider/iui-divider.vue';
 
-import { BUTTONS_SUMMARY, ICONS_SUMMARY, BADGES_SUMMARY } from '@/constants';
+import {
+	BUTTONS_SUMMARY,
+	ICONS_SUMMARY,
+	BADGES_SUMMARY,
+	AVATARS_SUMMARY,
+	DIVIDER_SUMMARY,
+} from '@/constants';
 </script>

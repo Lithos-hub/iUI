@@ -44,23 +44,23 @@ const computedColor = computed(() => {
 	}
 
 	&__neon {
-		@apply border-2 hover:bg-white hover:text-dark hover:font-extrabold;
+		@apply border hover:bg-white hover:text-dark hover:font-extrabold;
 
 		box-shadow:
-			0px 0px 2px white,
-			0px 0px 5px rgb(191, 250, 255),
-			0px 0px 7px rgb(136, 255, 255),
-			0px 0px 8px blue,
-			0px 0px 12px blue;
+			0px 0px 1px white,
+			0px 0px 2.5px rgb(191, 250, 255),
+			0px 0px 5px rgb(136, 255, 255),
+			0px 0px 7px blue,
+			0px 0px 10px blue;
 		text-shadow:
-			0px 0px 2px white,
-			0px 0px 7px rgb(191, 250, 255),
-			0px 0px 10px rgb(136, 255, 255),
-			0px 0px 15px blue,
-			0px 0px 25px blue;
+			0px 0px 1px white,
+			0px 0px 2px rgb(191, 250, 255),
+			0px 0px 4px rgb(136, 255, 255),
+			0px 0px 6px blue,
+			0px 0px 7px blue;
 
 		&:hover {
-			filter: drop-shadow(0 0 20px #3eb4db);
+			filter: drop-shadow(0 0 10px #3eb4db);
 			text-shadow: none;
 		}
 	}
@@ -94,6 +94,15 @@ const computedColor = computed(() => {
 			100% {
 				background-position: 0% 50%;
 			}
+		}
+	}
+
+	&__synth {
+		@apply bg-dark transition-all;
+		filter: drop-shadow(2px 2px #e11d48) drop-shadow(-2px -2px #06b6d4);
+
+		&:hover {
+			filter: drop-shadow(-2.5px -2.5px #e11d48) drop-shadow(2.5px 2.5px #06b6d4);
 		}
 	}
 

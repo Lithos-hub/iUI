@@ -1,6 +1,8 @@
 <template>
 	<div class="flex flex-col gap-5">
-		<DetailsHeader title="Divider" description="The Divider component is used to divide section, list items or any other element" />
+		<DetailsHeader
+			title="Divider"
+			description="The Divider component is used to divide section, list items or any other element"/>
 		<div
 			v-for="({ type, description, components_props }, i) of DIVIDER_VIEW"
 			:key="i"
@@ -9,8 +11,14 @@
 
 			<ComponentDescription :description="description" />
 
-			<div class="flex flex-col my-5">
-				<div v-for="(props, j) of components_props" :key="j">
+			<div class="flex flex-col gap-5">
+				<div
+					v-for="(props, j) of components_props"
+					:key="j"
+					class="flex flex-col gap-5 bg-dark p-5 rounded-[25px]">
+					<div class="mx-auto">
+						<code>{{ props }}</code>
+					</div>
 					<Divider v-bind="props" />
 				</div>
 			</div>

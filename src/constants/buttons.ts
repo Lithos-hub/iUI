@@ -36,6 +36,10 @@ export const BUTTONS_SUMMARY: SummaryComponent[] = [
 		text: 'Button cyber',
 	},
 	{
+		variant: 'synth',
+		text: 'Button synth',
+	},
+	{
 		color: 'primary',
 		text: 'Button primary',
 	},
@@ -141,6 +145,10 @@ export const BUTTONS_VIEW: ButtonComponent[] = [
 			{
 				variant: 'cyber',
 				text: 'Button cyber',
+			},
+			{
+				variant: 'synth',
+				text: 'Button synth',
 			},
 		],
 	},

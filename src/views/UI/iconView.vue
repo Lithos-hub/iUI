@@ -13,8 +13,14 @@
 			<ComponentDescription :description="description" />
 
 			<div class="flex flex-col gap-5 my-5">
-				<div class="flex flex-wrap gap-5">
-					<div v-for="(props, j) of components_props" :key="j" class="flex flex-col gap-5">
+				<div class="grid grid-cols-3 gap-5">
+					<div
+						v-for="(props, j) of components_props"
+						:key="j"
+						class="flex flex-col items-center gap-5 bg-dark p-5 rounded-[25px]">
+						<div>
+							<code>{{ props }}</code>
+						</div>
 						<Icon v-bind="props" />
 					</div>
 				</div>

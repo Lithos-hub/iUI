@@ -7,7 +7,35 @@ interface DividerComponent {
 }
 
 export const DIVIDER_SUMMARY: Divider[] = [
-	{},
+	{
+		color: 'white',
+	},
+	{
+		color: 'red',
+	},
+	{
+		color: 'green',
+		variant: 'dashed',
+	},
+	{
+		color: 'blue',
+		variant: 'dotted',
+	},
+	{
+		orientation: 'vertical',
+	},
+	{
+		mood: 'light',
+	},
+	{
+		mood: 'neon',
+	},
+	{
+		mood: 'synth',
+	},
+	{
+		mood: 'saw',
+	},
 ];
 
 export const DIVIDER_VIEW: DividerComponent[] = [
@@ -18,15 +46,15 @@ export const DIVIDER_VIEW: DividerComponent[] = [
 			{
 				color: 'red',
 			},
-            {
-                color: 'green',
-            },
-            {
-                color: 'blue',
-            },
-            {
-                color: 'yellow',
-            },
+			{
+				color: 'green',
+			},
+			{
+				color: 'blue',
+			},
+			{
+				color: 'yellow',
+			},
 		],
 	},
 	{
@@ -34,14 +62,14 @@ export const DIVIDER_VIEW: DividerComponent[] = [
 		description: `The <code>variant</code> prop is used to set a variant to the Divider. The default value is <code>solid</code>.`,
 		components_props: [
 			{
-                variant: 'solid',
+				variant: 'solid',
 			},
-            {
-                variant: 'dashed',
-            },
-            {
-                variant: 'dotted',
-            },
+			{
+				variant: 'dashed',
+			},
+			{
+				variant: 'dotted',
+			},
 		],
 	},
 	{
@@ -49,11 +77,29 @@ export const DIVIDER_VIEW: DividerComponent[] = [
 		description: `The <code>orientation</code> prop is used to set a orientation to the Divider. The default value is <code>horizontal</code>.`,
 		components_props: [
 			{
-                orientation: 'horizontal',
+				orientation: 'horizontal',
 			},
-            {
-                orientation: 'vertical',
-            },
+			{
+				orientation: 'vertical',
+			},
+		],
+	},
+	{
+		type: 'Mood',
+		description: `The <code>mood</code> prop is used to set a specific style to the Divider. The default value is <code>light</code>.`,
+		components_props: [
+			{
+				mood: 'light',
+			},
+			{
+				mood: 'neon',
+			},
+			{
+				mood: 'synth',
+			},
+			{
+				mood: 'saw',
+			},
 		],
 	},
 ];

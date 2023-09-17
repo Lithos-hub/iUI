@@ -1,6 +1,12 @@
 <template>
 	<div class="relative py-5">
-		<div :class="dividerClasses" :style="{ borderBottom: `1px solid ${getTailwindHexColor}` }" />
+		<div
+			:class="dividerClasses"
+			:style="{
+				borderBottom: `1px ${
+					variant === 'solid' ? 'solid' : variant === 'dashed' ? 'dashed' : 'dotted'
+				} ${getTailwindHexColor}`,
+			}"/>
 	</div>
 </template>
 
@@ -9,26 +15,79 @@ import { computed } from 'vue';
 import { Divider } from './iui-divider.interfaces';
 import { TAILWIND_COLORS } from '@/constants';
 
-const { orientation, variant, color } = withDefaults(defineProps<Divider>(), {
+const { orientation, variant, color, mood } = withDefaults(defineProps<Divider>(), {
 	orientation: 'horizontal',
 	variant: 'solid',
 	color: 'white',
-})
-
+	mood: 'light',
+});
 
 const dividerClasses = computed(() => {
 	return [
-		'border-b',
-		'opacity-75',
-		orientation === 'horizontal' ? 'w-full h-[1px]' : 'absolute top-0 h-full w-[1px] border-r border-b-none',
-		variant === 'solid' ? 'border-solid' : variant === 'dashed' ? 'border-dashed' : 'border-dotted',
+		'divider',
+		orientation === 'horizontal'
+			? 'w-full h-[1px]'
+			: 'absolute top-0 h-full w-[1px] border-r border-b-none',
+		`divider__${mood}`,
 	];
 });
 
 const getTailwindHexColor = computed(
 	() => TAILWIND_COLORS[`${color}-500` as keyof typeof TAILWIND_COLORS],
 );
-
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.divider {
+	@apply border-b;
+
+	&__light {
+		@apply opacity-75;
+	}
+
+	&__neon {
+		@apply bg-white p-[1px] rounded-full;
+		box-shadow:
+			0 0 2px white,
+			0 0 10px 1px #06b6d4;
+	}
+
+	&__synth {
+		@apply bg-dark p-[2px] border-none;
+		filter: drop-shadow(2px 2px #e11d48) drop-shadow(-2px -2px #06b6d4);
+	}
+
+	&__saw {
+		@apply border-none;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 10px;
+			background: radial-gradient(
+				circle at 100% 0,
+				transparent 0,
+				transparent 10px,
+				#06b6d4 1px,
+				red 50px
+			);
+			background-size: 10px 10px;
+			background-repeat: repeat-x;
+			animation: saw 0.5s infinite linear;
+			clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+		}
+
+		@keyframes saw {
+			0% {
+				background-position: 0 0;
+			}
+
+			100% {
+				background-position: 10px 0;
+			}
+		}
+	}
+}
+</style>

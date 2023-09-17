@@ -5,4 +5,5 @@ export enum Variant {
 	neon = 'neon',
 	stealth = 'stealth',
 	cyber = 'cyber',
+	synth = 'synth',
 }

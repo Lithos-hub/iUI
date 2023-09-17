@@ -1,3 +1,13 @@
 .text__gradient--primary {
-	@apply bg-gradient-to-tl from-primary to-secondary text-transparent bg-clip-text;
+	@apply bg-gradient-to-br from-primary to-secondary text-transparent bg-clip-text;
+}
+
+.border__synth--light {
+	filter: drop-shadow(1px 1px #e11d48) drop-shadow(-1px -1px #06b6d4);
+}
+.border__synth--medium {
+	filter: drop-shadow(2px 2px #e11d48) drop-shadow(-2px -2px #06b6d4);
+}
+.border__synth--heavy {
+	filter: drop-shadow(3px 3px #e11d48) drop-shadow(-3px -3px #06b6d4);
 }

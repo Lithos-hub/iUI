@@ -4,7 +4,7 @@
 
 html,
 body {
-	@apply h-full w-full m-0 p-0 overflow-y-auto;
+	@apply h-full w-full m-0 p-0 overflow-y-auto bg-opacity-10;
 	background: radial-gradient(
 			farthest-corner at 25% 85%,
 			rgba(17, 168, 130, 0.027),
