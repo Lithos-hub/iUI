@@ -7,8 +7,7 @@
 		<div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
 			<RouterLink to="/">
 				<h2 class="text-3xl">
-					I
-					<span class="text-red-500">UI</span>
+					I<span class="text-red-500">UI</span>
 				</h2>
 			</RouterLink>
 		</div>
