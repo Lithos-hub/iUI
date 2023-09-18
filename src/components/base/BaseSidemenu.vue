@@ -256,5 +256,3 @@ const menuItems: MenuItem[] = [
 	},
 ];
 </script>
-
-<style lang="scss" scoped></style>

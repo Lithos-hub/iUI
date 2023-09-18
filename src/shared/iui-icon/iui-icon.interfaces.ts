@@ -5,3 +5,10 @@ export interface Icon {
 	icon: IconName;
 	color?: ColorName;
 }
+
+export interface IconsBundle {
+	[key: string]: {
+		path: () => string;
+		viewport?: string;
+	};
+}

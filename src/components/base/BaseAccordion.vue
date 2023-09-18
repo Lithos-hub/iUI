@@ -53,13 +53,14 @@ const getHoverBackgroundTailwindHexColor = computed(() => `${getTailwindHexColor
 
 <style lang="scss" scoped>
 .sideMenu-link {
-	@apply p-2 pl-5 block font-semibold hover:text-white;
+	@apply p-2 pl-5 block font-semibold hover:text-secondary;
 }
 
 .accordion__title {
 	color: v-bind(getTailwindHexColor);
 
 	&:hover {
+		filter: brightness(1.2);
 		color: v-bind(getHoverTextTailwindHexColor);
 		background: v-bind(getHoverBackgroundTailwindHexColor);
 	}
