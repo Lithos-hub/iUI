@@ -16,7 +16,7 @@
 			v-else
 			:class="`flex flex-col justify-center items-center w-full h-full ${computedTextSize}`"
 			:style="{
-				backgroundColor: getTailwindHexColor,
+				backgroundColor: getTailwindColor(color) as string,
 			}">
 			<div v-if="text">
 				<span class="text-white">{{ text }}</span>
@@ -30,12 +30,12 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import { TAILWIND_COLORS } from '@/constants';
 
 import { Avatar } from './iui-avatar.interfaces';
 import Icon from '@/shared/iui-icon/iui-icon.vue';
+import { getTailwindColor } from '@/utils';
 
-const { image, color, size, icon, text } = withDefaults(defineProps<Avatar>(), {
+const { image, size, icon, text } = withDefaults(defineProps<Avatar>(), {
 	color: 'blue',
 	size: 30,
 });
@@ -45,10 +45,6 @@ const computedSize = computed(() => {
 
 	return Number(size);
 });
-
-const getTailwindHexColor = computed(
-	() => TAILWIND_COLORS[`${color}-700` as keyof typeof TAILWIND_COLORS],
-);
 
 const computedTextSize = computed(() => {
 	switch (size) {

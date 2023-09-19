@@ -109,7 +109,7 @@ export const ICONS_VIEW: IconComponent[] = [
 				icon: 'layers',
 			},
 			{
-				color: 'brown',
+				color: 'amber',
 				icon: 'layout',
 			},
 			{
@@ -117,7 +117,7 @@ export const ICONS_VIEW: IconComponent[] = [
 				icon: 'like',
 			},
 			{
-				color: 'grey',
+				color: 'gray',
 				icon: 'bulb',
 			},
 		],

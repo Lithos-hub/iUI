@@ -41,7 +41,7 @@ export const BADGES_SUMMARY: Badge[] = [
 	{
 		icon: 'layout',
 		content: 123,
-		badgeColor: 'brown',
+		badgeColor: 'amber',
 	},
 	{
 		icon: 'like',
@@ -103,7 +103,7 @@ export const BADGES_VIEW: BadgeComponent[] = [
 				icon: 'layers',
 			},
 			{
-				badgeColor: 'brown',
+				badgeColor: 'amber',
 				icon: 'layout',
 			},
 			{
@@ -111,7 +111,7 @@ export const BADGES_VIEW: BadgeComponent[] = [
 				icon: 'like',
 			},
 			{
-				badgeColor: 'grey',
+				badgeColor: 'gray',
 				icon: 'bulb',
 			},
 		],

@@ -41,6 +41,12 @@
 		<article class="flex flex-col">
 			<Divider v-for="(props, z) of DIVIDER_SUMMARY" :key="z" v-bind="props" />
 		</article>
+
+		<!-- TAGS -->
+		<strong class="text-primary text-xl">Tags</strong>
+		<article class="flex flex-wrap justify-stretch items-center gap-10">
+			<Tag v-for="(props, i) of TAGS_SUMMARY" :key="i" v-bind="props" />
+		</article>
 	</section>
 </template>
 
@@ -50,6 +56,7 @@ import Badge from '@/shared/iui-badge/iui-badge.vue';
 import Icon from '@/shared/iui-icon/iui-icon.vue';
 import Avatar from '@/shared/iui-avatar/iui-avatar.vue';
 import Divider from '@/shared/iui-divider/iui-divider.vue';
+import Tag from '@/shared/iui-tag/iui-tag.vue';
 
 import {
 	BUTTONS_SUMMARY,
@@ -57,5 +64,6 @@ import {
 	BADGES_SUMMARY,
 	AVATARS_SUMMARY,
 	DIVIDER_SUMMARY,
+	TAGS_SUMMARY
 } from '@/constants';
 </script>

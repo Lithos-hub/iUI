@@ -3,7 +3,7 @@
 		<div class="relative">
 			<div
 				:class="`badge ${dot ? 'badge__dotted' : ''}`"
-				:style="{ background: getTailwindHexColor }">
+				:style="{ background: color }">
 				<div v-if="!dot && content" class="text-sm">
 					<small>{{ getFormattedContent }}</small>
 				</div>
@@ -15,17 +15,13 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import { TAILWIND_COLORS } from '@/constants';
 
+import { getTailwindColor } from '@/utils';
 import { Badge } from './iui-badge.interfaces';
 
 const { badgeColor, dot, content } = withDefaults(defineProps<Badge>(), {
 	badgeColor: 'red',
 });
-
-const getTailwindHexColor = computed(
-	() => TAILWIND_COLORS[`${badgeColor}-500` as keyof typeof TAILWIND_COLORS],
-);
 
 const getFormattedContent = computed(() => {
 	if (!content) {
@@ -34,6 +30,8 @@ const getFormattedContent = computed(() => {
 
 	return Number(content) > 9 ? '9+' : content;
 });
+
+const color = computed(() => getTailwindColor(badgeColor))
 </script>
 
 <style lang="scss" scoped>
@@ -49,7 +47,7 @@ const getFormattedContent = computed(() => {
 @keyframes pulse {
 	0% {
 		transform: scale(1);
-		box-shadow: 0 0 0 0 v-bind(getTailwindHexColor);
+		box-shadow: 0 0 0 0 v-bind(color);
 	}
 
 	70% {

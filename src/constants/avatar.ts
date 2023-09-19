@@ -102,7 +102,7 @@ export const AVATARS_VIEW: AvatarComponent[] = [
 				icon: 'layers',
 			},
 			{
-				color: 'brown',
+				color: 'amber',
 				icon: 'layout',
 			},
 			{
@@ -110,7 +110,7 @@ export const AVATARS_VIEW: AvatarComponent[] = [
 				icon: 'like',
 			},
 			{
-				color: 'deep-purple',
+				color: 'indigo',
 				icon: 'bulb',
 			},
 		],
@@ -149,11 +149,11 @@ export const AVATARS_VIEW: AvatarComponent[] = [
 			},
 			{
 				text: 'PM',
-				color: 'brown',
+				color: 'amber',
 			},
 			{
 				text: 'SE',
-				color: 'grey',
+				color: 'gray',
 			},
 			{
 				text: 'YT',

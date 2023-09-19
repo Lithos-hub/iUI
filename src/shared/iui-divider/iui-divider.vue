@@ -3,23 +3,23 @@
 		<div
 			:class="dividerClasses"
 			:style="{
-				borderBottom: `1px ${
+				borderBottom: mood ? '' : `1px ${
 					variant === 'solid' ? 'solid' : variant === 'dashed' ? 'dashed' : 'dotted'
-				} ${getTailwindHexColor}`,
+				} ${getTailwindColor(color)}`,
 			}"/>
 	</div>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue';
+
+import { getTailwindColor } from '@/utils';
 import { Divider } from './iui-divider.interfaces';
-import { TAILWIND_COLORS } from '@/constants';
 
 const { orientation, variant, color, mood } = withDefaults(defineProps<Divider>(), {
 	orientation: 'horizontal',
 	variant: 'solid',
 	color: 'white',
-	mood: 'light',
 });
 
 const dividerClasses = computed(() => {
@@ -31,10 +31,6 @@ const dividerClasses = computed(() => {
 		`divider__${mood}`,
 	];
 });
-
-const getTailwindHexColor = computed(
-	() => TAILWIND_COLORS[`${color}-500` as keyof typeof TAILWIND_COLORS],
-);
 </script>
 
 <style lang="scss" scoped>
