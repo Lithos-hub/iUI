@@ -4,7 +4,7 @@
 			title="Tag"
 			description="The Tag component is used to highlight small pieces of information"/>
 		<div
-			v-for="({ type, description, components_props }, i) of TAGS_VIEW"
+			v-for="({ type, description, components_props }, i) of TAG_VIEW"
 			:key="i"
 			class="flex flex-col gap-5 p-10 bg-primary/10 border border-primary/50 rounded-[25px]">
 			<h3 class="text-2xl text-gray-200 font-bold uppercase">{{ type }}</h3>
@@ -28,7 +28,7 @@
 </template>
 
 <script script setup lang="ts">
-import { TAGS_VIEW } from '@/constants';
+import { TAG_VIEW } from '@/constants';
 import { DetailsHeader, ComponentDescription } from '@/components';
 
 import Tag from '@/shared/iui-tag/iui-tag.vue';

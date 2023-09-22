@@ -6,16 +6,16 @@ interface TagComponent {
 	type: string;
 }
 
-export const TAGS_SUMMARY: Tag[] = [
+export const TAG_SUMMARY: Tag[] = [
     {
         content: 'Tag'
     },
 	{
-        appendIcon: 'chevron',
+        appendIcon: 'eye',
         content: 'Tag',
 	},
     {
-        prependIcon: 'chevron',
+        prependIcon: 'layers',
         content: 'Tag',
     },
     {
@@ -60,7 +60,7 @@ export const TAGS_SUMMARY: Tag[] = [
 
 ];
 
-export const TAGS_VIEW: TagComponent[] = [
+export const TAG_VIEW: TagComponent[] = [
 	{
 		type: 'Default',
 		description: `The default tag is used to highlight an item.`,
@@ -85,7 +85,7 @@ export const TAGS_VIEW: TagComponent[] = [
         description: `The <code>append-icon</code> prop is used to set a specific icon in the right side`,
         components_props: [
             {
-                appendIcon: 'shoping-cart',
+                appendIcon: 'shopingCart',
                 content: 'See products',
             },
         ],
@@ -123,7 +123,7 @@ export const TAGS_VIEW: TagComponent[] = [
             {
                 content: 'Tag',
                 variant: 'danger',
-                prependIcon: 'alert-triangle'
+                prependIcon: 'alertTriangle'
             },
             {
                 content: 'Tag',

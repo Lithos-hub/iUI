@@ -5,7 +5,7 @@
 		<!-- BUTTONS -->
 		<strong class="text-primary text-xl">Buttons</strong>
 		<article class="flex flex-wrap justify-stretch items-center gap-10">
-			<Button v-for="(props, i) of BUTTONS_SUMMARY" :key="i" v-bind="props">
+			<Button v-for="(props, i) of BUTTON_SUMMARY" :key="i" v-bind="props">
 				{{ props.text }}
 			</Button>
 		</article>
@@ -14,7 +14,7 @@
 		<strong class="text-primary text-xl">Icons</strong>
 		<article class="flex flex-wrap items-center gap-10">
 			<div
-				v-for="(props, j) of ICONS_SUMMARY"
+				v-for="(props, j) of ICON_SUMMARY"
 				:key="j"
 				class="flex flex-col gap-2.5 justify-center items-center border border-white/10 p-2 min-w-[100px]">
 				<Icon v-bind="props" class="w-10 h-10" />
@@ -25,7 +25,7 @@
 		<!-- BADGES -->
 		<strong class="text-primary text-xl">Badges</strong>
 		<article class="flex flex-wrap items-center gap-10">
-			<Badge v-for="(props, x) of BADGES_SUMMARY" :key="x" v-bind="props">
+			<Badge v-for="(props, x) of BADGE_SUMMARY" :key="x" v-bind="props">
 				<Icon v-bind="props" class="w-10 h-10" />
 			</Badge>
 		</article>
@@ -33,7 +33,7 @@
 		<!-- AVATARS -->
 		<strong class="text-primary text-xl">Avatars</strong>
 		<article class="flex flex-wrap items-center gap-10">
-			<Avatar v-for="(props, y) of AVATARS_SUMMARY" :key="y" v-bind="props" class="w-10 h-10" />
+			<Avatar v-for="(props, y) of AVATAR_SUMMARY" :key="y" v-bind="props" class="w-10 h-10" />
 		</article>
 
 		<!-- DIVIDERS -->
@@ -45,7 +45,7 @@
 		<!-- TAGS -->
 		<strong class="text-primary text-xl">Tags</strong>
 		<article class="flex flex-wrap justify-stretch items-center gap-10">
-			<Tag v-for="(props, i) of TAGS_SUMMARY" :key="i" v-bind="props" />
+			<Tag v-for="(props, i) of TAG_SUMMARY" :key="i" v-bind="props" />
 		</article>
 	</section>
 </template>
@@ -59,11 +59,11 @@ import Divider from '@/shared/iui-divider/iui-divider.vue';
 import Tag from '@/shared/iui-tag/iui-tag.vue';
 
 import {
-	BUTTONS_SUMMARY,
-	ICONS_SUMMARY,
-	BADGES_SUMMARY,
-	AVATARS_SUMMARY,
+	BUTTON_SUMMARY,
+	ICON_SUMMARY,
+	BADGE_SUMMARY,
+	AVATAR_SUMMARY,
 	DIVIDER_SUMMARY,
-	TAGS_SUMMARY
+	TAG_SUMMARY
 } from '@/constants';
 </script>

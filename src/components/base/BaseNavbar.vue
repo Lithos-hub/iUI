@@ -31,7 +31,7 @@
 
 <script lang="ts" setup>
 import Button from '@/shared/iui-button/iui-button.vue';
-const version = '0.2.0';
+const version = '0.4.0';
 
 const menuItems = [
 	{

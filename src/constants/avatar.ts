@@ -6,7 +6,7 @@ interface AvatarComponent {
 	type: string;
 }
 
-export const AVATARS_SUMMARY: Avatar[] = [
+export const AVATAR_SUMMARY: Avatar[] = [
 	{
 		icon: 'chevron',
 	},
@@ -19,11 +19,11 @@ export const AVATARS_SUMMARY: Avatar[] = [
 	},
 	{
 		color: 'blue',
-		icon: 'shoping-cart',
+		icon: 'shopingCart',
 	},
 ];
 
-export const AVATARS_VIEW: AvatarComponent[] = [
+export const AVATAR_VIEW: AvatarComponent[] = [
 	{
 		type: 'Icon',
 		description: `The <code>icon</code> prop is used to set an icon to the Avatar. The default value is <code>undefined</code>.`,
@@ -32,7 +32,7 @@ export const AVATARS_VIEW: AvatarComponent[] = [
 				icon: 'chevron',
 			},
 			{
-				icon: 'shoping-cart',
+				icon: 'shopingCart',
 			},
 			{
 				icon: 'sun',
@@ -79,7 +79,7 @@ export const AVATARS_VIEW: AvatarComponent[] = [
 			},
 			{
 				color: 'green',
-				icon: 'shoping-cart',
+				icon: 'shopingCart',
 			},
 			{
 				color: 'blue',

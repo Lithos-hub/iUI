@@ -5,7 +5,7 @@
 			description="The Icon component is a wrapper around the SVG element. It allows you to
       use SVG icons in your application easily."/>
 		<div
-			v-for="({ type, description, components_props }, i) of ICONS_VIEW"
+			v-for="({ type, description, components_props }, i) of ICON_VIEW"
 			:key="i"
 			class="flex flex-col gap-5 p-10 bg-primary/10 border border-primary/50 rounded-[25px]">
 			<h3 class="text-2xl text-gray-200 font-bold uppercase">{{ type }}</h3>
@@ -30,7 +30,7 @@
 </template>
 
 <script script setup lang="ts">
-import { ICONS_VIEW } from '@/constants';
+import { ICON_VIEW } from '@/constants';
 import { DetailsHeader, ComponentDescription } from '@/components';
 
 import Icon from '@/shared/iui-icon/iui-icon.vue';

@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div :class="`tag tag__${variant}`">
+		<div :class="`tag tag__${variant} ${closable && 'active:scale-110'}`">
 			<Icon v-if="prependIcon" :icon="prependIcon" :color="computedVariantColor" class="h-6 w-6" />
 			<small>
 				<slot v-if="!content" />
@@ -10,7 +10,7 @@
             <Icon
                 v-if="closable"
                 icon="close"
-                class="h-5 w-5 hover:cursor-pointer rounded-full hover:bg-slate-300/50"
+                class="h-5 w-5 hover:cursor-pointer rounded-full hover:bg-slate-300/50 transition-all"
                 @click="$emit('close')"/>
 		</div>
 	</div>
@@ -26,8 +26,8 @@ import { ColorName } from '@/interfaces';
 const { variant } = withDefaults(defineProps<Tag>(), {
     variant: 'default',
     closable: false,
-    prependIcon: '',
-    appendIcon: '',
+    prependIcon: undefined,
+    appendIcon: undefined,
     content: '',
 });
 
@@ -62,7 +62,7 @@ const computedVariantColor: ComputedRef<ColorName> = computed(() => {
 <style scoped lang="scss">
 
 .tag {
-    @apply rounded-full px-3 min-w-[70px] py-2 flex justify-center items-center gap-1 brightness-125;
+    @apply rounded-full px-3 min-w-[70px] py-2 flex justify-center items-center gap-1 brightness-125 transition-all;
 
     &__default {
         @apply bg-slate-50/10 text-slate-50;

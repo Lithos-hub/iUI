@@ -6,13 +6,13 @@ interface BadgeComponent {
 	type: string;
 }
 
-export const BADGES_SUMMARY: Badge[] = [
+export const BADGE_SUMMARY: Badge[] = [
 	{
 		icon: 'chevron',
 		badgeColor: 'red',
 	},
 	{
-		icon: 'shoping-cart',
+		icon: 'shopingCart',
 		badgeColor: 'green',
 		content: '8',
 	},
@@ -55,13 +55,13 @@ export const BADGES_SUMMARY: Badge[] = [
 	},
 ];
 
-export const BADGES_VIEW: BadgeComponent[] = [
+export const BADGE_VIEW: BadgeComponent[] = [
 	{
 		type: 'Dot',
 		description: `The <code>dot</code> prop is used to set a dot to the Badge. The default value is <code>false</code>.`,
 		components_props: [
 			{
-				icon: 'shoping-cart',
+				icon: 'shopingCart',
 				dot: true,
 			},
 			{
@@ -80,7 +80,7 @@ export const BADGES_VIEW: BadgeComponent[] = [
 			},
 			{
 				badgeColor: 'green',
-				icon: 'shoping-cart',
+				icon: 'shopingCart',
 			},
 			{
 				badgeColor: 'blue',
@@ -121,7 +121,7 @@ export const BADGES_VIEW: BadgeComponent[] = [
 		description: `The <code>content</code> prop is used to set a content to the Badge. The default value is <code>''</code>. If the <code>dot</code> prop is set to <code>true</code>, the <code>content</code> prop is ignored. If the <code>content</code> prop is above <code>9</code>, the Badge will display <code>9+</code>.`,
 		components_props: [
 			{
-				icon: 'shoping-cart',
+				icon: 'shopingCart',
 				content: 1,
 			},
 			{

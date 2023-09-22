@@ -5,3 +5,4 @@ export * from './icons';
 export * from './avatar';
 export * from './divider';
 export * from './tag';
+export * from './alert';

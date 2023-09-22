@@ -6,12 +6,12 @@ interface IconComponent {
 	type: string;
 }
 
-export const ICONS_SUMMARY: Icon[] = [
+export const ICON_SUMMARY: Icon[] = [
 	{
 		icon: 'chevron',
 	},
 	{
-		icon: 'shoping-cart',
+		icon: 'shopingCart',
 	},
 	{
 		icon: 'sun',
@@ -39,7 +39,7 @@ export const ICONS_SUMMARY: Icon[] = [
 	},
 ];
 
-export const ICONS_VIEW: IconComponent[] = [
+export const ICON_VIEW: IconComponent[] = [
 	{
 		type: 'Icon',
 		description: `The <code>icon</code> prop is used to set a specific icon. `,
@@ -48,7 +48,7 @@ export const ICONS_VIEW: IconComponent[] = [
 				icon: 'chevron',
 			},
 			{
-				icon: 'shoping-cart',
+				icon: 'shopingCart',
 			},
 			{
 				icon: 'sun',
@@ -86,7 +86,7 @@ export const ICONS_VIEW: IconComponent[] = [
 			},
 			{
 				color: 'green',
-				icon: 'shoping-cart',
+				icon: 'shopingCart',
 			},
 			{
 				color: 'blue',

@@ -10,7 +10,7 @@ interface ButtonComponent {
 	type: string;
 }
 
-export const BUTTONS_SUMMARY: SummaryComponent[] = [
+export const BUTTON_SUMMARY: SummaryComponent[] = [
 	{
 		variant: 'solid',
 		text: 'Button solid',
@@ -117,7 +117,7 @@ export const BUTTONS_SUMMARY: SummaryComponent[] = [
 	},
 ];
 
-export const BUTTONS_VIEW: ButtonComponent[] = [
+export const BUTTON_VIEW: ButtonComponent[] = [
 	{
 		type: 'Variant',
 		description: `The <code>variant</code> prop is used to set a special style to the button. The default value is <code>solid</code>.`,

@@ -47,7 +47,7 @@ const icons: ComputedRef<IconsBundle> = computed(() => ({
 		path: () =>
 			`<path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.5858L16.9497 5.63605L18.364 7.05029L13.4142 12L18.364 16.9497L16.9497 18.364L12 13.4142L7.05025 18.364L5.63602 16.9497L10.5858 12L5.63605 7.05029L7.05029 5.63605L12 10.5858Z" fill="${iconColor.value}"></path>`,
 	},
-	['shoping-cart']: {
+	shopingCart: {
 		path: () =>
 			`<path fill-rule="evenodd" clip-rule="evenodd" d="M5.41442 6H3.75V4.5H6.58558L7.33558 7.5H18.935L17.2321 15.1627L16.5 15.75H8.25L7.51786 15.1627L6.02 8.42233L5.41442 6ZM7.68496 9L8.85163 14.25H15.8984L17.065 9H7.68496ZM10.5 18C10.5 18.8284 9.82843 19.5 9 19.5C8.17157 19.5 7.5 18.8284 7.5 18C7.5 17.1716 8.17157 16.5 9 16.5C9.82843 16.5 10.5 17.1716 10.5 18ZM15 19.5C15.8284 19.5 16.5 18.8284 16.5 18C16.5 17.1716 15.8284 16.5 15 16.5C14.1716 16.5 13.5 17.1716 13.5 18C13.5 18.8284 14.1716 19.5 15 19.5Z" fill="${iconColor.value}"></path>`,
 	},
@@ -87,13 +87,12 @@ const icons: ComputedRef<IconsBundle> = computed(() => ({
 		path: () =>
 		`<circle cx="12" cy="12" r="10" stroke="${iconColor.value}" stroke-width="1.5"/><path d="M8.5 12.5L10.5 14.5L15.5 9.5" stroke="${iconColor.value}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>`
 	},
-	["alert-triangle"]: {
+	alertTriangle: {
 		path: () =>
 		`<path fill-rule="evenodd" clip-rule="evenodd" d="M5.31171 10.7615C8.23007 5.58716 9.68925 3 12 3C14.3107 3 15.7699 5.58716 18.6883 10.7615L19.0519 11.4063C21.4771 15.7061 22.6897 17.856 21.5937 19.428C20.4978 21 17.7864 21 12.3637 21H11.6363C6.21356 21 3.50217 21 2.40626 19.428C1.31034 17.856 2.52291 15.7061 4.94805 11.4063L5.31171 10.7615ZM12 7.25C12.4142 7.25 12.75 7.58579 12.75 8V13C12.75 13.4142 12.4142 13.75 12 13.75C11.5858 13.75 11.25 13.4142 11.25 13V8C11.25 7.58579 11.5858 7.25 12 7.25ZM12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17Z" fill="${iconColor.value}"/>`
 	}
 }));
 
-export type IconName = keyof typeof icons.value;
 
 onMounted(() => {
 	svg.value!.innerHTML = icons.value[icon as keyof typeof icons.value].path()
