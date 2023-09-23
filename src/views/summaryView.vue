@@ -47,16 +47,28 @@
 		<article class="flex flex-wrap justify-stretch items-center gap-10">
 			<Tag v-for="(props, i) of TAG_SUMMARY" :key="i" v-bind="props" />
 		</article>
+
+		<!-- ALERTS -->
+		<strong class="text-primary text-xl">Alerts</strong>
+		<article class="flex flex-wrap justify-stretch items-center gap-10">
+			<div v-for="(props, i) of computedAlerts" :key="i">
+				<Alert  v-bind="props" @close="closeAlerts" />
+				<Button @click="toggleAlert(i)">Display alert: {{ props.type || 'default' }}</Button>
+			</div>
+		</article>
 	</section>
 </template>
 
 <script setup lang="ts">
+import { ref, computed } from 'vue'
+
 import Button from '@/shared/iui-button/iui-button.vue';
 import Badge from '@/shared/iui-badge/iui-badge.vue';
 import Icon from '@/shared/iui-icon/iui-icon.vue';
 import Avatar from '@/shared/iui-avatar/iui-avatar.vue';
 import Divider from '@/shared/iui-divider/iui-divider.vue';
 import Tag from '@/shared/iui-tag/iui-tag.vue';
+import Alert from '@/shared/iui-alert/iui-alert.vue';
 
 import {
 	BUTTON_SUMMARY,
@@ -64,6 +76,40 @@ import {
 	BADGE_SUMMARY,
 	AVATAR_SUMMARY,
 	DIVIDER_SUMMARY,
-	TAG_SUMMARY
+	TAG_SUMMARY,
+	ALERT_SUMMARY
 } from '@/constants';
+
+const alertsRef = ref(
+	ALERT_SUMMARY.map((alert) => {
+		return {
+			...alert,
+			open: false
+		}
+	}).flat()
+)
+
+const computedAlerts = computed(() => {
+	return alertsRef.value.map((alert, alertIndex) => {
+		return {
+			...alert,
+			open: alertsRef.value[alertIndex].open
+		}
+	})
+})
+
+const toggleAlert = (index: number) => {
+	closeAlerts()
+	
+	alertsRef.value[index].open = !alertsRef.value[index].open
+};
+
+const closeAlerts = () => {
+	alertsRef.value = alertsRef.value.map((alert) => {
+		return {
+			...alert,
+			open: false
+		}
+	})
+}
 </script>

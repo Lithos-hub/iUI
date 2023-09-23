@@ -17,7 +17,7 @@ export type IconName =
 	'bulb' |
 	'check' |
 	'alertTriangle' |
-	'alertCircle' |
+	'alertHexagon' |
 	'informationCircle' |
 	'checkmarkCircle'
 

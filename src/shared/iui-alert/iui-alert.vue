@@ -30,10 +30,10 @@ const iconByAlertType = computed(() => {
 	switch (props.type) {
 		case 'success':
 			return 'checkmarkCircle';
-		case 'danger':
-			return 'alertCircle';
+		case 'error':
+			return 'alertHexagon';
 		case 'warning':
-			return 'alertCircle';
+			return 'alertTriangle';
 		case 'info':
 			return 'informationCircle';
 		default:
@@ -42,11 +42,7 @@ const iconByAlertType = computed(() => {
 });
 
 watch(() => props.open, (value) => {
-	if (value) {
-		setTimeout(() => {
-			emit('close');
-		}, 5000);
-	}
+	if (value) setTimeout(() => emit('close'), 5000);
 });
 </script>
 
@@ -64,25 +60,36 @@ watch(() => props.open, (value) => {
 }
 .alert {
     @apply flex items-center gap-5 p-2.5;
+	background-size: 400%;
+	animation: backgroundMotion 0.8s infinite linear alternate-reverse;
 
 	&__default {
-		@apply bg-slate-500/80 text-white backdrop-blur;
+		@apply bg-gradient-to-r from-slate-500/90 to-gray-400/80 text-white backdrop-blur;
 	}
 
 	&__success {
-		@apply bg-green-500/80 text-white backdrop-blur;
+		@apply bg-gradient-to-r from-green-500/90 to-emerald-400/80 text-white backdrop-blur;
 	}
 
 	&__error {
-		@apply bg-red-500/80 text-white backdrop-blur;
+		@apply bg-gradient-to-r from-red-500/90 to-rose-500/80 text-white backdrop-blur;
 	}
 
 	&__warning {
-		@apply bg-yellow-500/80 text-white backdrop-blur;
+		@apply bg-gradient-to-r from-yellow-500/90 to-orange-300/80 text-white backdrop-blur;
 	}
 
 	&__info {
-		@apply bg-cyan-500/80 text-white backdrop-blur;
+		@apply bg-gradient-to-r from-cyan-500/90 to-sky-400/80 text-white backdrop-blur;
+	}
+}
+
+@keyframes backgroundMotion {
+	0% {
+		background-position: 0% 0%;
+	}
+	100% {
+		background-position: 100% 100%;
 	}
 }
 </style>

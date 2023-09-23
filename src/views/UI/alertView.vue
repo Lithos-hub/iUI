@@ -19,7 +19,7 @@
 						<div>
 							<code>{{ props }}</code>
 						</div>
-						<Button @click="toggleAlert(j)">Toggle alert</Button>
+						<Button @click="toggleAlert(i, j)">Toggle alert</Button>
 						<Alert v-bind="props" @close="closeAlerts" />
 					</div>
 				</div>
@@ -36,40 +36,48 @@ import { DetailsHeader, ComponentDescription } from '@/components';
 import Button from '@/shared/iui-button/iui-button.vue';
 import Alert from '@/shared/iui-alert/iui-alert.vue';
 
-// Get only the open property from the components_props array inside ALERT_VIEW array
 const alertsRef = ref(
-	ALERT_VIEW.map(({ components_props }) => components_props.map(() => ({ open: false }))).flat()
+	ALERT_VIEW.map(({ components_props, ...rest }) => {
+		return {
+			...rest,
+			components_props: components_props.map((props) => {
+				return { ...props, open: false }
+			})
+		}
+	}).flat()
 )
 
 const computedAlerts = computed(() => {
-	return ALERT_VIEW.map(alert => {
+	return alertsRef.value.map(({ components_props, ...rest }, alertIndex) => {
 		return {
-			...alert,
-			components_props: alert.components_props.map((props, i) => {
+			...rest,
+			components_props: components_props.map((props, index) => {
 				return {
 					...props,
-					open: alertsRef.value[i].open
+					open: alertsRef.value[alertIndex].components_props[index].open
 				}
 			})
 		}
 	})
 })
 
-const toggleAlert = (index: number) => {
-	alertsRef.value[index].open = !alertsRef.value[index].open
-
-	// Close all other alerts
-	alertsRef.value = alertsRef.value.map((alert, i) => {
-		if (i !== index) {
-			return { open: false }
-		}
-		return alert
-	})
+const toggleAlert = (alertIndex: number, propsIndex: number) => {
+	closeAlerts()
+	
+	alertsRef.value[alertIndex].components_props[propsIndex].open = !alertsRef.value[alertIndex].components_props[propsIndex].open
 };
 
 const closeAlerts = () => {
-	alertsRef.value = alertsRef.value.map(() => {
-		return { open: false }
+	alertsRef.value = alertsRef.value.map((alert) => {
+		return {
+			...alert,
+			components_props: alert.components_props.map((props) => {
+				return {
+					...props,
+					open: false
+				}
+			})
+		}
 	})
 }
 </script>

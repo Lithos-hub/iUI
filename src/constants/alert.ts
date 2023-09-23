@@ -7,11 +7,32 @@ interface AlertComponent {
 }
 
 export const ALERT_SUMMARY: Alert[] = [
-	{
+    {
         title: 'Alert',
-        message: 'This is an alert message',
+        message: 'This is a default message',
+    },
+    {
+        title: 'Alert',
+        message: 'This is a success message with icon',
         type: 'success',
-	},
+        showIcon: true,
+    },
+    {
+        title: 'Alert',
+        message: 'This is a warning message without icon',
+        type: 'warning',
+    },
+    {
+        title: 'Alert',
+        message: 'This is an error message with icon',
+        type: 'error',
+        showIcon: true,
+    },
+    {
+        title: 'Alert',
+        message: 'This is an info message',
+        type: 'info',
+    },
 ];
 
 export const ALERT_VIEW: AlertComponent[] = [
@@ -61,6 +82,41 @@ export const ALERT_VIEW: AlertComponent[] = [
                 message: 'This is an alert message',
                 type: 'info',
             },
+        ]
+    },
+    {
+        type: 'showIcon',
+        description: `The <code>showIcon</code> prop is used to set the icon of the alert. Each alert type will show a specific icon depending on the behavior. The default value is <code>false</code>.`,
+        components_props: [ 
+            {
+                title: 'Alert',
+                message: 'This is an alert message',
+                showIcon: true,
+            },
+            {
+                title: 'Alert',
+                message: 'This is an alert message',
+                type: 'success',
+                showIcon: true,
+            },
+            {
+                title: 'Alert',
+                message: 'This is an alert message',
+                type: 'warning',
+                showIcon: true,
+            },
+            {
+                title: 'Alert',
+                message: 'This is an alert message',
+                type: 'error',
+                showIcon: true,
+            },
+            {
+                title: 'Alert',
+                message: 'This is an alert message',
+                type: 'info',
+                showIcon: true,
+            }
         ]
     }
 ];

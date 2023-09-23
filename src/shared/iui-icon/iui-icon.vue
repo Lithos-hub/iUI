@@ -5,6 +5,7 @@
 			ref="svg"
 			version="1.1"
 			xmlns="http://www.w3.org/2000/svg"
+			fill="none"
 			:viewBox="icons[icon].viewport || '0 0 24 24'"></svg>
 	</div>
 </template>
@@ -89,7 +90,23 @@ const icons: ComputedRef<IconsBundle> = computed(() => ({
 	},
 	alertTriangle: {
 		path: () =>
-		`<path fill-rule="evenodd" clip-rule="evenodd" d="M5.31171 10.7615C8.23007 5.58716 9.68925 3 12 3C14.3107 3 15.7699 5.58716 18.6883 10.7615L19.0519 11.4063C21.4771 15.7061 22.6897 17.856 21.5937 19.428C20.4978 21 17.7864 21 12.3637 21H11.6363C6.21356 21 3.50217 21 2.40626 19.428C1.31034 17.856 2.52291 15.7061 4.94805 11.4063L5.31171 10.7615ZM12 7.25C12.4142 7.25 12.75 7.58579 12.75 8V13C12.75 13.4142 12.4142 13.75 12 13.75C11.5858 13.75 11.25 13.4142 11.25 13V8C11.25 7.58579 11.5858 7.25 12 7.25ZM12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17Z" fill="${iconColor.value}"/>`
+		`<path d="M5.31171 10.7615C8.23007 5.58716 9.68925 3 12 3C14.3107 3 15.7699 5.58716 18.6883 10.7615L19.0519 11.4063C21.4771 15.7061 22.6897 17.856 21.5937 19.428C20.4978 21 17.7864 21 12.3637 21H11.6363C6.21356 21 3.50217 21 2.40626 19.428C1.31034 17.856 2.52291 15.7061 4.94805 11.4063L5.31171 10.7615Z" stroke="${iconColor.value}" stroke-width="1.5"/>
+		<path d="M12 8V13" stroke="${iconColor.value}" stroke-width="1.5" stroke-linecap="round"/>
+		<circle cx="12" cy="16" r="1" fill="${iconColor.value}"/>`
+	},
+	alertHexagon: {
+		path: () =>
+		`<path d="M3 9.22843V14.7716C3 15.302 3.21071 15.8107 3.58579 16.1858L7.81421 20.4142C8.18929 20.7893 8.69799 21 9.22843 21H14.7716C15.302 21 15.8107 20.7893 16.1858 20.4142L20.4142 16.1858C20.7893 15.8107 21 15.302 21 14.7716V9.22843C21 8.69799 20.7893 8.18929 20.4142 7.81421L16.1858 3.58579C15.8107 3.21071 15.302 3 14.7716 3H9.22843C8.69799 3 8.18929 3.21071 7.81421 3.58579L3.58579 7.81421C3.21071 8.18929 3 8.69799 3 9.22843Z" stroke="${iconColor.value}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+		<path d="M12 8V13" stroke="${iconColor.value}" stroke-width="2" stroke-linecap="round"/>
+		<path d="M12 16V15.9888" stroke="${iconColor.value}" stroke-width="2" stroke-linecap="round"/>`
+	},
+	checkmarkCircle: {
+		path: () =>
+		`<polyline id="primary" points="21 5 12 14 8 10" style="fill: none; stroke: ${iconColor.value}; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></polyline><path id="primary-2" data-name="primary" d="M20.94,11A8.26,8.26,0,0,1,21,12a9,9,0,1,1-9-9,8.83,8.83,0,0,1,4,1" style="fill: none; stroke: ${iconColor.value}; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path>`
+	},
+	informationCircle: {
+		path: () =>
+		`<path d="M12 8H12.01M12 11V16M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="${iconColor.value}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`
 	}
 }));
 
