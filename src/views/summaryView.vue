@@ -56,6 +56,13 @@
 				<Button @click="toggleAlert(i)">Display alert: {{ props.type || 'default' }}</Button>
 			</div>
 		</article>
+
+		<!-- PROGRESS -->
+		<strong class="text-primary text-xl">Progress</strong>
+		<article class="flex flex-wrap justify-stretch items-center gap-10">
+			<Progress v-for="(props, i) of PROGRESS_SUMMARY" :key="i" v-bind="props" />
+		</article>
+
 	</section>
 </template>
 
@@ -69,6 +76,7 @@ import Avatar from '@/shared/iui-avatar/iui-avatar.vue';
 import Divider from '@/shared/iui-divider/iui-divider.vue';
 import Tag from '@/shared/iui-tag/iui-tag.vue';
 import Alert from '@/shared/iui-alert/iui-alert.vue';
+import Progress from '@/shared/iui-progress/iui-progress.vue';
 
 import {
 	BUTTON_SUMMARY,
@@ -77,7 +85,8 @@ import {
 	AVATAR_SUMMARY,
 	DIVIDER_SUMMARY,
 	TAG_SUMMARY,
-	ALERT_SUMMARY
+	ALERT_SUMMARY,
+	PROGRESS_SUMMARY
 } from '@/constants';
 
 const alertsRef = ref(
