@@ -3,7 +3,7 @@
         <div
         :class="`progress w-full ${displayValue ? 'h-2' : 'h-1'} ${indeterminate && 'progress__indeterminate'}`"
         :style="!indeterminate ? computedDefault : {}" />
-        <div v-if="displayValue" class="progress__value flex flex-col justify-center items-center h-4">
+        <div v-if="displayValue && !indeterminate" class="progress__value flex flex-col justify-center items-center h-4">
             <small class="text-xs text-white bg-[#202020] min-w-[50px] text-center">{{ value }}%</small>
         </div>
     </div>
