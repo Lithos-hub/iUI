@@ -75,6 +75,12 @@ const menuItems: MenuItem[] = [
 				},
 			},
 			{
+				text: 'Spinner',
+				to: {
+					name: 'iui:spinner',
+				},
+			},
+			{
 				text: 'Skeleton',
 				to: {
 					name: 'iui:skeleton',

@@ -31,7 +31,7 @@ npm run test:unit
 
 | Component (UI) | Status      |
 | -------------- | ----------- |
-| Alert          | ![WipBtn]   |
+| Alert          | ![ReadyBtn] |
 | Avatar         | ![ReadyBtn] |
 | Badge          | ![ReadyBtn] |
 | Button         | ![ReadyBtn] |
@@ -44,13 +44,13 @@ npm run test:unit
 | Divider        | ![ReadyBtn] |
 | Icon           | ![ReadyBtn] |
 | List           | ![WipBtn]   |
-| Loading        | ![WipBtn]   |
+| Spinner        | ![WipBtn]   |
 | Modal          | ![WipBtn]   |
-| Progress       | ![WipBtn]   |
+| Progress       | ![ReadyBtn] |
 | Skeleton       | ![WipBtn]   |
 | Spinner        | ![WipBtn]   |
 | Table          | ![WipBtn]   |
-| Tag            | ![WipBtn]   |
+| Tag            | ![ReadyBtn] |
 | Tooltip        | ![WipBtn]   |
 
 | Component (Navigation) | Status    |

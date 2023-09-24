@@ -41,6 +41,11 @@ export const componentsRoutes = [
 		path: 'progress',
 	},
 	{
+		component: () => import('@/views/UI/spinnerView.vue'),
+		name: 'iui:spinner',
+		path: 'spinner',
+	},
+	{
 		component: () => import('@/views/UI/skeletonView.vue'),
 		name: 'iui:skeleton',
 		path: 'skeleton',
