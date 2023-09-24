@@ -44,7 +44,7 @@ npm run test:unit
 | Divider        | ![ReadyBtn] |
 | Icon           | ![ReadyBtn] |
 | List           | ![WipBtn]   |
-| Spinner        | ![WipBtn]   |
+| Spinner        | ![ReadyBtn] |
 | Modal          | ![WipBtn]   |
 | Progress       | ![ReadyBtn] |
 | Skeleton       | ![WipBtn]   |

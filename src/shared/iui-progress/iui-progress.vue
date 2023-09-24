@@ -35,10 +35,6 @@ const computedColor = computed(() => getTailwindColor(color));
 
 <style lang="scss" scoped>
 .progress {
-	&__default {
-		background: linear-gradient(to right, v-bind(color) v-bind(value), transparent 0%);
-	}
-
 	&__indeterminate {
 		background-size: 100% 100%;
 		background-image: linear-gradient(

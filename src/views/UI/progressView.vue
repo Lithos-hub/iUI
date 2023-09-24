@@ -2,7 +2,7 @@
 	<div class="flex flex-col gap-5">
 		<DetailsHeader
 			title="Progress"
-			description="The Progress component shows a linear progress bar. It is used to graphically represent the state of charge or a percentage."/>
+			description="The Progress component shows a linear progress bar. It is used to graphically represent the state of loading or a percentage." />
 		<div
 			v-for="({ type, description, components_props }, i) of PROGRESS_VIEW"
 			:key="i"

@@ -52,7 +52,7 @@
 		<strong class="text-primary text-xl">Alerts</strong>
 		<article class="flex flex-wrap justify-stretch items-center gap-10">
 			<div v-for="(props, i) of computedAlerts" :key="i">
-				<Alert  v-bind="props" @close="closeAlerts" />
+				<Alert v-bind="props" @close="closeAlerts" />
 				<Button @click="toggleAlert(i)">Display alert: {{ props.type || 'default' }}</Button>
 			</div>
 		</article>
@@ -63,11 +63,16 @@
 			<Progress v-for="(props, i) of PROGRESS_SUMMARY" :key="i" v-bind="props" />
 		</article>
 
+		<!-- SPINNERS-->
+		<strong class="text-primary text-xl">Spinners</strong>
+		<article class="flex flex-wrap justify-stretch items-center gap-10">
+			<Spinner v-for="(props, i) of SPINNER_SUMMARY" :key="i" v-bind="props" />
+		</article>
 	</section>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed } from 'vue';
 
 import Button from '@/shared/iui-button/iui-button.vue';
 import Badge from '@/shared/iui-badge/iui-badge.vue';
@@ -77,6 +82,7 @@ import Divider from '@/shared/iui-divider/iui-divider.vue';
 import Tag from '@/shared/iui-tag/iui-tag.vue';
 import Alert from '@/shared/iui-alert/iui-alert.vue';
 import Progress from '@/shared/iui-progress/iui-progress.vue';
+import Spinner from '@/shared/iui-spinner/iui-spinner.vue';
 
 import {
 	BUTTON_SUMMARY,
@@ -86,39 +92,40 @@ import {
 	DIVIDER_SUMMARY,
 	TAG_SUMMARY,
 	ALERT_SUMMARY,
-	PROGRESS_SUMMARY
+	PROGRESS_SUMMARY,
+	SPINNER_SUMMARY,
 } from '@/constants';
 
 const alertsRef = ref(
 	ALERT_SUMMARY.map((alert) => {
 		return {
 			...alert,
-			open: false
-		}
-	}).flat()
-)
+			open: false,
+		};
+	}).flat(),
+);
 
 const computedAlerts = computed(() => {
 	return alertsRef.value.map((alert, alertIndex) => {
 		return {
 			...alert,
-			open: alertsRef.value[alertIndex].open
-		}
-	})
-})
+			open: alertsRef.value[alertIndex].open,
+		};
+	});
+});
 
 const toggleAlert = (index: number) => {
-	closeAlerts()
-	
-	alertsRef.value[index].open = !alertsRef.value[index].open
+	closeAlerts();
+
+	alertsRef.value[index].open = !alertsRef.value[index].open;
 };
 
 const closeAlerts = () => {
 	alertsRef.value = alertsRef.value.map((alert) => {
 		return {
 			...alert,
-			open: false
-		}
-	})
-}
+			open: false,
+		};
+	});
+};
 </script>

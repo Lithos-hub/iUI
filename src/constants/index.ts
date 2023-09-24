@@ -7,3 +7,4 @@ export * from './divider';
 export * from './tag';
 export * from './alert';
 export * from './progress';
+export * from './spinner';
