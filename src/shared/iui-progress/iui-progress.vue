@@ -1,5 +1,5 @@
 <template>
-	<div class="flex items-center gap-5 rounded-full w-full overflow-hidden">
+	<div class="flex items-center gap-5 rounded-full w-full overflow-hidden my-5">
 		<div
 			:class="`progress w-full ${displayValue ? 'h-2' : 'h-1'} ${
 				indeterminate && 'progress__indeterminate'

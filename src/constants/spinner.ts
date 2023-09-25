@@ -6,33 +6,6 @@ interface SpinnerComponent {
 	type: string;
 }
 
-export const SPINNER_SUMMARY: Spinner[] = [
-	{
-		
-	},
-	{
-		color: 'red',
-	},
-	{
-		color: 'green',
-	},
-	{
-		color: 'blue',
-	},
-	{
-		displayText: true,
-	},
-	{
-		displayText: true,
-		color: 'purple',
-	},
-    {
-        displayText: true,
-        color: 'red',
-        textColor: 'orange',
-    }
-];
-
 export const SPINNER_VIEW: SpinnerComponent[] = [
 	{
 		type: 'color',

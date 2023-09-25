@@ -1,26 +1,58 @@
-// Use fonts from @/assets/fonts Roboto-[type].ttf
+// Use fonts from @/assets/fonts/roboto/Roboto-[type].ttf
 
 @font-face {
 	font-family: Roboto Regular;
-	src: url('@/assets/fonts/Roboto-Regular.ttf') format('truetype');
+	src: url('@/assets/fonts/roboto/Roboto-Regular.ttf') format('truetype');
 }
 
 @font-face {
 	font-family: Roboto Medium;
-	src: url('@/assets/fonts/Roboto-Medium.ttf') format('truetype');
+	src: url('@/assets/fonts/roboto/Roboto-Medium.ttf') format('truetype');
 }
 
 @font-face {
 	font-family: Roboto Bold;
-	src: url('@/assets/fonts/Roboto-Bold.ttf') format('truetype');
+	src: url('@/assets/fonts/roboto/Roboto-Bold.ttf') format('truetype');
 }
 
 @font-face {
 	font-family: Roboto Light;
-	src: url('@/assets/fonts/Roboto-Light.ttf') format('truetype');
+	src: url('@/assets/fonts/roboto/Roboto-Light.ttf') format('truetype');
 }
 
 @font-face {
 	font-family: Roboto Thin;
-	src: url('@/assets/fonts/Roboto-Thin.ttf') format('truetype');
+	src: url('@/assets/fonts/roboto/Roboto-Thin.ttf') format('truetype');
+}
+
+// Use fonts from @/assets/fonts/fira-sans/FiraSans-[type].ttf
+
+@font-face {
+	font-family: Fira Sans Regular;
+	src: url('@/assets/fonts/fira-sans/FiraSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: Fira Sans Medium;
+	src: url('@/assets/fonts/fira-sans/FiraSans-Medium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: Fira Sans Bold;
+	src: url('@/assets/fonts/fira-sans/FiraSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: Fira Sans Black;
+	src: url('@/assets/fonts/fira-sans/FiraSans-Black.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: Fira Sans Light;
+	src: url('@/assets/fonts/fira-sans/FiraSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: Fira Sans Thin;
+	src: url('@/assets/fonts/fira-sans/FiraSans-Thin.ttf') format('truetype');
 }

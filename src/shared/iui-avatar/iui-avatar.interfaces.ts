@@ -1,4 +1,4 @@
-import { IconName } from '@/shared/iui-icon/iui-icon.vue';
+import { IconName } from '@/shared/iui-icon/iui-icon.interfaces';
 import type { ColorName } from '@/interfaces';
 
 export interface Avatar {

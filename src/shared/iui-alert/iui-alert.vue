@@ -21,7 +21,7 @@ const props = withDefaults(defineProps<Alert>(), {
 	showIcon: false,
 	title: 'Alert: ',
 	message: 'This is an alert message',
-	open: false
+	open: false,
 });
 
 const emit = defineEmits(['close']);
@@ -41,13 +41,15 @@ const iconByAlertType = computed(() => {
 	}
 });
 
-watch(() => props.open, (value) => {
-	if (value) setTimeout(() => emit('close'), 5000);
-});
+watch(
+	() => props.open,
+	(value) => {
+		if (value) setTimeout(() => emit('close'), 5000);
+	},
+);
 </script>
 
 <style lang="scss" scoped>
-
 .alert__wrapper--opened {
 	@apply bottom-0;
 }
@@ -55,11 +57,8 @@ watch(() => props.open, (value) => {
 .alert__wrapper--closed {
 	@apply -bottom-[100px];
 }
-.alert__wrapper {
-	@apply fixed left-0 w-full transition-all;
-}
 .alert {
-    @apply flex items-center gap-5 p-2.5;
+	@apply flex items-center gap-5 p-2.5;
 	background-size: 400%;
 	animation: backgroundMotion 0.8s infinite linear alternate-reverse;
 

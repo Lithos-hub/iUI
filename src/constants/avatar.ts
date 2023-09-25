@@ -6,23 +6,6 @@ interface AvatarComponent {
 	type: string;
 }
 
-export const AVATAR_SUMMARY: Avatar[] = [
-	{
-		icon: 'chevron',
-	},
-	{
-		image: '/dog.jpg',
-	},
-	{
-		color: 'red',
-		text: 'CS',
-	},
-	{
-		color: 'blue',
-		icon: 'shopingCart',
-	},
-];
-
 export const AVATAR_VIEW: AvatarComponent[] = [
 	{
 		type: 'Icon',

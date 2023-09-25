@@ -6,55 +6,6 @@ interface BadgeComponent {
 	type: string;
 }
 
-export const BADGE_SUMMARY: Badge[] = [
-	{
-		icon: 'chevron',
-		badgeColor: 'red',
-	},
-	{
-		icon: 'shopingCart',
-		badgeColor: 'green',
-		content: '8',
-	},
-	{
-		icon: 'sun',
-		badgeColor: 'blue',
-	},
-	{
-		icon: 'heart',
-		dot: true,
-		badgeColor: 'yellow',
-	},
-	{
-		icon: 'eye',
-		content: 123,
-		badgeColor: 'pink',
-	},
-	{
-		icon: 'student',
-		badgeColor: 'rose',
-	},
-	{
-		icon: 'layers',
-		badgeColor: 'purple',
-	},
-	{
-		icon: 'layout',
-		content: 123,
-		badgeColor: 'amber',
-	},
-	{
-		icon: 'like',
-		content: 7,
-		badgeColor: 'black',
-	},
-	{
-		icon: 'bulb',
-		dot: true,
-		badgeColor: 'orange',
-	},
-];
-
 export const BADGE_VIEW: BadgeComponent[] = [
 	{
 		type: 'Dot',

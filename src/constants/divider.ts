@@ -6,38 +6,6 @@ interface DividerComponent {
 	type: string;
 }
 
-export const DIVIDER_SUMMARY: Divider[] = [
-	{
-		color: 'white',
-	},
-	{
-		color: 'red',
-	},
-	{
-		color: 'green',
-		variant: 'dashed',
-	},
-	{
-		color: 'blue',
-		variant: 'dotted',
-	},
-	{
-		orientation: 'vertical',
-	},
-	{
-		mood: 'light',
-	},
-	{
-		mood: 'neon',
-	},
-	{
-		mood: 'synth',
-	},
-	{
-		mood: 'saw',
-	},
-];
-
 export const DIVIDER_VIEW: DividerComponent[] = [
 	{
 		type: 'Color',

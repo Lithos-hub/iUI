@@ -6,35 +6,6 @@ interface AlertComponent {
 	type: string;
 }
 
-export const ALERT_SUMMARY: Alert[] = [
-    {
-        title: 'Alert',
-        message: 'This is a default message',
-    },
-    {
-        title: 'Alert',
-        message: 'This is a success message with icon',
-        type: 'success',
-        showIcon: true,
-    },
-    {
-        title: 'Alert',
-        message: 'This is a warning message without icon',
-        type: 'warning',
-    },
-    {
-        title: 'Alert',
-        message: 'This is an error message with icon',
-        type: 'error',
-        showIcon: true,
-    },
-    {
-        title: 'Alert',
-        message: 'This is an info message',
-        type: 'info',
-    },
-];
-
 export const ALERT_VIEW: AlertComponent[] = [
 	{
         type: 'title',

@@ -8,7 +8,7 @@
 					iUI is a UI components portfolio made with Vue 3, TypeScript, Vite 4, SASS and Tailwind.
 				</li>
 				<li>
-					Each component can be shown through the side menu. In the /summary route, you can see a
+					Each component can be shown through the side menu. In the /playground route, you can see a
 					list of all the components.
 				</li>
 				<li>

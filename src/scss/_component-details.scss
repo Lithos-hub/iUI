@@ -3,3 +3,11 @@
 		@apply text-slate-200 leading-10;
 	}
 }
+
+.component__details--wrapper {
+	@apply flex flex-col gap-5 p-10 bg-dark/10 border border-slate-500/50 rounded-lg;
+}
+
+.component__details--card {
+	@apply flex flex-col justify-center items-center w-full gap-5 p-10 bg-dark/10 border border-slate-500/50 rounded-lg;
+}

@@ -11,7 +11,7 @@
 			alt="Avatar image"
 			:width="computedSize"
 			:height="computedSize"
-			:class="`rounded-full aspect-square object-cover`"/>
+			:class="`rounded-full aspect-square object-cover`" />
 		<span
 			v-else
 			:class="`flex flex-col justify-center items-center w-full h-full ${computedTextSize}`"

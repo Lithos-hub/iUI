@@ -1,15 +1,16 @@
 <template>
 	<div class="relative">
 		<div class="relative">
-			<div
-				:class="`badge ${dot ? 'badge__dotted' : ''}`"
-				:style="{ background: color }">
+			<div :class="`badge ${dot ? 'badge__dotted' : ''}`" :style="{ background: color }">
 				<div v-if="!dot && content" class="text-sm">
 					<small>{{ getFormattedContent }}</small>
 				</div>
 			</div>
 		</div>
-		<slot />
+		<slot v-if="!icon" />
+		<div v-else class="">
+			<Icon :icon="icon" />
+		</div>
 	</div>
 </template>
 
@@ -17,9 +18,11 @@
 import { computed } from 'vue';
 
 import { getTailwindColor } from '@/utils';
+
+import Icon from '@/shared/iui-icon/iui-icon.vue';
 import { Badge } from './iui-badge.interfaces';
 
-const { badgeColor, dot, content } = withDefaults(defineProps<Badge>(), {
+const { icon, badgeColor, dot, content } = withDefaults(defineProps<Badge>(), {
 	badgeColor: 'red',
 });
 
@@ -31,7 +34,7 @@ const getFormattedContent = computed(() => {
 	return Number(content) > 9 ? '9+' : content;
 });
 
-const color = computed(() => getTailwindColor(badgeColor))
+const color = computed(() => getTailwindColor(badgeColor));
 </script>
 
 <style lang="scss" scoped>

@@ -6,33 +6,6 @@ interface ProgressComponent {
 	type: string;
 }
 
-export const PROGRESS_SUMMARY: Progress[] = [
-    {
-        indeterminate: true,
-    },
-    {
-        value: 10,
-        color: 'red',
-    },
-    {
-        value: 50,
-        color: 'green',
-    },
-    {
-        value: 100,
-        color: 'blue',
-    },
-    {
-        displayValue: true,
-        value: 10,
-    },
-    {
-        displayValue: true,
-        value: 50,
-        color: 'purple'
-    }
-];
-
 export const PROGRESS_VIEW: ProgressComponent[] = [
     {
         type: 'indeterminate',

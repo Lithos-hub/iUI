@@ -1,18 +1,20 @@
 * {
-	font-family: Roboto Light;
+	font-family: Fira Sans Regular;
 }
 
 html,
 body {
-	@apply h-full w-full m-0 p-0 overflow-y-auto bg-opacity-10;
+	@apply min-h-screen w-full m-0 p-0;
+	scroll-behavior: smooth;
+	background-position: fixed;
 	background: radial-gradient(
-			farthest-corner at 25% 85%,
-			rgba(17, 168, 130, 0.027),
+			farthest-corner at 5% 90%,
+			rgba(17, 168, 130, 0.046),
 			transparent 1000px
 		),
-		radial-gradient(farthest-corner at 45% 50%, rgba(183, 0, 255, 0.068), transparent 1000px),
-		radial-gradient(farthest-corner at 95% 0%, rgba(0, 110, 255, 0.041), transparent 1000px),
-		linear-gradient(#010101, black);
+		radial-gradient(farthest-corner at 100% 100%, rgba(85, 0, 255, 0.038), transparent 20000px),
+		radial-gradient(farthest-corner at 100% 0%, rgba(0, 255, 234, 0.065), transparent 20000px),
+		linear-gradient(#1f0513, black);
 }
 
 ::-webkit-scrollbar {
@@ -20,5 +22,5 @@ body {
 }
 
 code {
-	@apply mx-2 p-2 rounded bg-gray-500;
+	@apply text-sm p-2 rounded bg-gray-500 w-full;
 }

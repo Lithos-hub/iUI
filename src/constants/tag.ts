@@ -6,60 +6,6 @@ interface TagComponent {
 	type: string;
 }
 
-export const TAG_SUMMARY: Tag[] = [
-    {
-        content: 'Tag'
-    },
-	{
-        appendIcon: 'eye',
-        content: 'Tag',
-	},
-    {
-        prependIcon: 'layers',
-        content: 'Tag',
-    },
-    {
-        content: 'Tag',
-        closable: true,
-    },
-    {
-        content: 'Tag',
-    },
-    {
-        content: 'Tag',
-        variant: 'primary',
-    },
-    {
-        content: 'Tag',
-        variant: 'secondary',
-    },
-    {
-        content: 'Tag',
-        variant: 'success',
-    },
-    {
-        content: 'Tag',
-        variant: 'danger',
-    },
-    {
-        content: 'Tag',
-        variant: 'warning',
-    },
-    {
-        content: 'Tag',
-        variant: 'info',
-    },
-    {
-        content: 'Tag',
-        variant: 'light',
-    },
-    {
-        content: 'Tag',
-        variant: 'dark',
-    }
-
-];
-
 export const TAG_VIEW: TagComponent[] = [
 	{
 		type: 'Default',

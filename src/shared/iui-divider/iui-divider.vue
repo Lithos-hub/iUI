@@ -3,10 +3,12 @@
 		<div
 			:class="dividerClasses"
 			:style="{
-				borderBottom: mood ? '' : `1px ${
-					variant === 'solid' ? 'solid' : variant === 'dashed' ? 'dashed' : 'dotted'
-				} ${getTailwindColor(color)}`,
-			}"/>
+				borderBottom: mood
+					? ''
+					: `1px ${
+							variant === 'solid' ? 'solid' : variant === 'dashed' ? 'dashed' : 'dotted'
+					  } ${getTailwindColor(color)}`,
+			}" />
 	</div>
 </template>
 
@@ -45,7 +47,7 @@ const dividerClasses = computed(() => {
 		@apply bg-white p-[1px] rounded-full;
 		box-shadow:
 			0 0 2px white,
-			0 0 10px 1px #06b6d4;
+			0 0 10px 1px v-bind(color);
 	}
 
 	&__synth {

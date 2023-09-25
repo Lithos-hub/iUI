@@ -6,39 +6,6 @@ interface IconComponent {
 	type: string;
 }
 
-export const ICON_SUMMARY: Icon[] = [
-	{
-		icon: 'chevron',
-	},
-	{
-		icon: 'shopingCart',
-	},
-	{
-		icon: 'sun',
-	},
-	{
-		icon: 'heart',
-	},
-	{
-		icon: 'eye',
-	},
-	{
-		icon: 'student',
-	},
-	{
-		icon: 'layers',
-	},
-	{
-		icon: 'layout',
-	},
-	{
-		icon: 'like',
-	},
-	{
-		icon: 'bulb',
-	},
-];
-
 export const ICON_VIEW: IconComponent[] = [
 	{
 		type: 'Icon',

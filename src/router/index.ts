@@ -13,13 +13,13 @@ const routes = [
 		name: 'iui',
 		component: () => import('@/layouts/DefaultLayout.vue'),
 		redirect: {
-			name: 'iui:summary',
+			name: 'iui:playground',
 		},
 		children: [
 			{
-				path: 'summary',
-				name: 'iui:summary',
-				component: () => import('@/views/summaryView.vue'),
+				path: 'playground',
+				name: 'iui:playground',
+				component: () => import('@/views/_PLAYGROUND/playgroundView.vue'),
 			},
 			{
 				path: 'about',
@@ -31,7 +31,10 @@ const routes = [
 	},
 ];
 
-export default createRouter({
+const router = createRouter({
+	scrollBehavior: () => ({ top: 0 }),
 	history: createWebHistory(),
 	routes,
 });
+
+export default router;
