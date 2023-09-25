@@ -24,7 +24,6 @@
 				<Icon icon="typescript" class="h-8 w-10" />
 			</h2>
 		</div>
-		<div class="dotted-background" />
 	</div>
 </template>
 
@@ -37,27 +36,6 @@ const onButtonHover = ref(false);
 </script>
 
 <style lang="scss" scoped>
-.hero {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-}
-
-.dotted-background {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-image: radial-gradient(rgba(133, 45, 184, 0.322) 1px, transparent 1px);
-	background-size: 50px 50px;
-	animation: background-motion 10s linear infinite;
-	z-index: 0;
-}
-
 @keyframes background-motion {
 	from {
 		background-position: 0 0;

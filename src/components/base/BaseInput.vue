@@ -1,7 +1,5 @@
 <template>
-	<div>
-		<input v-model="modelValue" type="text" placeholder="Search a component" class="input" />
-	</div>
+	<input v-model="modelValue" type="text" placeholder="Search a component" class="input" />
 </template>
 
 <script setup lang="ts">
@@ -12,6 +10,6 @@ const modelValue = defineModel<string>();
 
 <style lang="scss" scoped>
 .input {
-	@apply bg-dark/50 rounded-lg p-5 w-full border-transparent transition-all focus:border-slate-50/10 focus:border outline-none;
+	@apply bg-dark/50 rounded-lg p-5 w-full border border-transparent transition-all focus:border-slate-50/10 focus:border focus:outline-none;
 }
 </style>

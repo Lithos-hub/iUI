@@ -16,7 +16,7 @@
 				:to="{
 					name: to,
 				}"
-				class="hover:scale-105 hover:shadow-2xl hover:brightness-125 transition-all relative">
+				class="hover:scale-105 transition-all relative">
 				<Card>
 					<template #header>
 						<h2 class="p-2 px-5">{{ category }}</h2>
@@ -60,6 +60,7 @@ import Alert from '@/shared/iui-alert/iui-alert.vue';
 import { playgroundComponents } from '@/constants/playground';
 
 const search = ref('');
+
 const filteredComponents = computed(() => {
 	return playgroundComponents.filter(({ category }) => {
 		return search.value ? category.toLowerCase().includes(search.value.toLowerCase()) : true;

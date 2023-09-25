@@ -40,7 +40,7 @@ const computedColor = computed(() => {
 	}
 
 	&__ghost {
-		@apply bg-none border-2 border-primary hover:bg-primary;
+		@apply bg-none border border-primary hover:bg-primary;
 	}
 
 	&__neon {

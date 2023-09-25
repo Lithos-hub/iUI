@@ -6,19 +6,22 @@ html,
 body {
 	@apply min-h-screen w-full m-0 p-0;
 	scroll-behavior: smooth;
-	background-position: fixed;
-	background: radial-gradient(
-			farthest-corner at 5% 90%,
-			rgba(17, 168, 130, 0.046),
-			transparent 1000px
-		),
-		radial-gradient(farthest-corner at 100% 100%, rgba(85, 0, 255, 0.038), transparent 20000px),
-		radial-gradient(farthest-corner at 100% 0%, rgba(0, 255, 234, 0.065), transparent 20000px),
-		linear-gradient(#1f0513, black);
 }
 
 ::-webkit-scrollbar {
-	@apply hidden;
+	width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+	background: #e11d48;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #101010;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
 }
 
 code {
