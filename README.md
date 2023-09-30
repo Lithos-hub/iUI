@@ -27,7 +27,7 @@ npm run start
 npm run test:unit
 ```
 
-## Components list
+## Components list - Roadmap
 
 | Component (UI) | Status      |
 | -------------- | ----------- |
