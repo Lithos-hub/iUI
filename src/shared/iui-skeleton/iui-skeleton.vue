@@ -1,32 +1,29 @@
 <template>
 	<div ref="slotRef" class="skeleton__wrapper flex flex-col gap-5">
-		<div v-for="(slot, i) of distribution" :key="i" :class="`skeleton skeleton__${slot}`">
-			<slot :name="slot" />
+		<div v-for="(slot, i) of distribution" :key="i" :class="slot !== 'list' && slot !== 'table' && `skeleton skeleton__${slot}` ">
+			<div v-if="slot === 'list'" class="flex flex-col gap-2 p-2">
+				<div class="skeleton skeleton__list-item bg-dark/50 rounded-full" />
+				<div class="skeleton skeleton__list-item bg-dark/50 rounded-full" />
+				<div class="skeleton skeleton__list-item bg-dark/50 rounded-full" />
+			</div>
+			<div v-if="slot === 'table'" class="skeleton grid grid-cols-3 gap-1 p-1">
+				<div v-for="n in 9" :key="n" class="skeleton__list-item bg-dark/50 p-5 rounded-md" />
+			</div>
+			<div v-else>
+				<slot :name="slot" />
+			</div>
 		</div>
 	</div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, useSlots } from 'vue';
+import { SkeletonSlots, DistributionSlot } from './iui-skeleton.interfaces';
 
 const { distribution } = defineProps<{
-	distribution: string[];
+	distribution: DistributionSlot[];
 }>();
 
-const slots = useSlots()
-
-const cleanInnerHTMLContent = () => {
-	const skeletons = document.querySelectorAll('.skeleton');
-
-	for (const skeleton of skeletons) {
-		skeleton.innerHTML = '';
-	}
-};
-
-onMounted(() => {
-	cleanInnerHTMLContent()
-	console.log({...slots})
-	});
+defineSlots<SkeletonSlots>()
 </script>
 
 <style lang="scss" scoped>
@@ -40,11 +37,12 @@ onMounted(() => {
 }
 
 .skeleton {
+	
 	&__wrapper {
 		@apply bg-dark/50 p-5 rounded-lg;
-
+		
 		& > * {
-			@apply bg-slate-500/10 rounded-full px-4 py-1;
+			@apply rounded-md;
 			animation: skeleton 1s ease-in-out infinite;
 			background-image: linear-gradient(
 				90deg,
@@ -56,7 +54,7 @@ onMounted(() => {
 		}
 	}
 	&__title {
-		@apply w-1/2 h-10;
+		@apply w-1/2 h-10 rounded-full;
 	}
 
 	&__description {
@@ -76,7 +74,7 @@ onMounted(() => {
 	}
 
 	&__avatar {
-		@apply w-12 h-auto aspect-square;
+		@apply w-12 h-auto aspect-square rounded-full;
 	}
 
 	&__button {
@@ -108,7 +106,7 @@ onMounted(() => {
 	}
 
 	&__divider {
-		@apply w-full h-1;
+		@apply w-full h-[2px];
 	}
 
 	&__heading {
@@ -120,7 +118,7 @@ onMounted(() => {
 	}
 
 	&__list-item {
-		@apply w-full h-10;
+		@apply w-full h-2;
 	}
 
 	&__list-item-avatar {
@@ -160,7 +158,7 @@ onMounted(() => {
 	}
 
 	&__table {
-		@apply w-full h-40;
+		@apply w-full h-40 rounded-md;
 	}
 
 	&__table-heading {
