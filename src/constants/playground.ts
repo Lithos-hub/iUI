@@ -7,6 +7,7 @@ import TagComponent from '@/shared/iui-tag/iui-tag.vue';
 import AlertComponent from '@/shared/iui-alert/iui-alert.vue';
 import ProgressComponent from '@/shared/iui-progress/iui-progress.vue';
 import SpinnerComponent from '@/shared/iui-spinner/iui-spinner.vue';
+import SkeletonComponent from '@/shared/iui-skeleton/iui-skeleton.vue';
 
 import { Button } from '@/shared/iui-button/iui-button.interfaces';
 import { Badge } from '@/shared/iui-badge/iui-badge.interfaces';
@@ -17,8 +18,10 @@ import { Tag } from '@/shared/iui-tag/iui-tag.interfaces';
 import { Alert } from '@/shared/iui-alert/iui-alert.interfaces';
 import { Progress } from '@/shared/iui-progress/iui-progress.interfaces';
 import { Spinner } from '@/shared/iui-spinner/iui-spinner.interfaces';
+import { Skeleton } from '@/shared/iui-skeleton/iui-skeleton.interfaces';
 
-type ComponentProps = Button | Icon | Badge | Avatar | Divider | Tag | Alert | Progress | Spinner;
+
+type ComponentProps = Button | Icon | Badge | Avatar | Divider | Tag | Alert | Progress | Spinner | Skeleton;
 
 type Component =
 	| typeof ButtonComponent
@@ -29,7 +32,8 @@ type Component =
 	| typeof TagComponent
 	| typeof AlertComponent
 	| typeof ProgressComponent
-	| typeof SpinnerComponent;
+	| typeof SpinnerComponent
+	| typeof SkeletonComponent;
 
 type Components = {
 	component: Component;
@@ -294,4 +298,17 @@ export const playgroundComponents: PlaygroundComponent[] = [
 			},
 		],
 	},
+	{
+		category: 'Skeleton',
+		to: 'iui:skeleton',
+		components: [
+			{
+				component: SkeletonComponent,
+				props: {
+					slots: ['avatar', 'divider', 'table'],
+					distribution: ['avatar', 'divider', 'table'],
+				},
+			},
+		],
+	}
 ];

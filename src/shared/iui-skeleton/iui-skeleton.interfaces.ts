@@ -1,3 +1,8 @@
+export interface Skeleton {
+    slots?: DistributionSlot[];
+    distribution: DistributionSlot[];
+}
+
 export interface SkeletonSlots {
 	title(): string,
 	description(): string,

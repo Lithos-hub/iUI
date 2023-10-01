@@ -25,7 +25,7 @@
 						<div
 							v-if="category !== 'Alert'"
 							:class="`${
-								category === 'Divider' || category === 'Progress'
+								category === 'Divider' || category === 'Progress' || category === 'Skeleton'
 									? 'w-full'
 									: 'flex flex-col lg:flex-row gap-5'
 							}`">
