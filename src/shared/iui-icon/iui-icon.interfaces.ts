@@ -4,6 +4,7 @@ export type IconName =
 	'vue' |
 	'vite' |
 	'typescript' |
+	'github' |
 	'chevron' |
 	'close' |
 	'shopingCart' |

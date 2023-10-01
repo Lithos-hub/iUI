@@ -1,3 +1,4 @@
+
 <template>
 	<div class="flex flex-col gap-5">
 		<h2 class="text-6xl text-center">iUI</h2>
@@ -10,15 +11,22 @@
 				<li>
 					Explore them from the <code>/iui/playground</code> route. 👀 
 				</li>
-				<li>
+				<li class="flex flex-col gap-5 justify-center items-center">
 					This project is still under development, is open source and you can contribute to it by making a pull request on the
-					GitHub repository 🚀 
+					GitHub repository 🚀
+
+					<a href="https://github.com/Lithos-hub/iUI" target="_blank" class="hover:scale-110 transition-all">
+						<Icon icon="github" class="w-14 h-14" />
+					</a>
 				</li>
 				<li>
-					In the future the project could be migrated to a monorepo structure, with a library of
-					components and a demo app.
+					For now, this is only a UI components portfolio, not a components library or framework, but In the future the project could be migrated to a monorepo structure.
 				</li>
 			</ul>
 		</div>
 	</div>
 </template>
+
+<script setup lang="ts">
+import Icon from '@/shared/iui-icon/iui-icon.vue';
+</script>

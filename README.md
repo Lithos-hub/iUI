@@ -47,7 +47,7 @@ npm run test:unit
 | Spinner        | ![ReadyBtn] |
 | Modal          | ![WipBtn]   |
 | Progress       | ![ReadyBtn] |
-| Skeleton       | ![WipBtn]   |
+| Skeleton       | ![ReadyBtn] |
 | Table          | ![WipBtn]   |
 | Tag            | ![ReadyBtn] |
 | Tooltip        | ![WipBtn]   |
