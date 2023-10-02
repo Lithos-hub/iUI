@@ -1,6 +1,6 @@
 <template>
-	<div :class="`alert__wrapper ${open ? 'alert__wrapper--opened' : 'alert__wrapper--closed'}`">
-		<div :class="`alert alert__${type}`">
+	<div data-testid="iui-alert__wrapper" :class="`alert__wrapper ${open ? 'alert__wrapper--opened' : 'alert__wrapper--closed'}`">
+		<div data-testid="iui-alert" :class="`alert alert__${type}`">
 			<Icon v-if="showIcon" :icon="iconByAlertType" color="white" class="h-6 w-6" />
 			<div class="flex flex-col">
 				<h3>{{ title }}</h3>
