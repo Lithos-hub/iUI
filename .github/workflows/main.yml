@@ -1,64 +1,73 @@
-name: Pipeline
+name: iUI workflow
 
 on:
   push:
     branches:
+      - feature/*
+      - fix/*
+      - refactor/*
+      - main
+  pull_request:
+    branches:
       - main
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-20.04
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm ci
 
-      - name: Build
-        run: npm run build
+      - name: Test code
+        run: |
+          npm run test
 
   lint:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm ci
 
-      - name: Format
-        run: npm run format
+      - name: Lint code
+        run: |
+          npm run lint:fix
 
-      - name: Lint
-        run: npm run lint:fix
-
-  test:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-20.04
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm ci
 
-      - name: Run unit tests
-        run: npm run test
+      - name: Build code
+        run: |
+          npm run build
