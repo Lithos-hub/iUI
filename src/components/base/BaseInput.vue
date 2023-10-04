@@ -5,7 +5,7 @@
 <script setup lang="ts">
 import { defineModel } from 'vue';
 
-const modelValue = defineModel<string>();
+const modelValue = defineModel();
 </script>
 
 <style lang="scss" scoped>

@@ -19,7 +19,7 @@
 							<code>{{ props }}</code>
 						</div>
 						<Badge v-bind="props">
-							<Icon :icon="props.icon" />
+							<Icon :icon="(props.icon as IconName)" />
 						</Badge>
 					</div>
 				</div>
@@ -34,4 +34,5 @@ import { DetailsHeader, ComponentDescription } from '@/components';
 
 import Badge from '@/shared/iui-badge/iui-badge.vue';
 import Icon from '@/shared/iui-icon/iui-icon.vue';
+import { IconName } from '@/shared/iui-icon/iui-icon.interfaces';
 </script>

@@ -1,6 +1,7 @@
 <template>
 	<div class="relative py-5">
 		<div
+			data-testid="iui-divider"
 			:class="dividerClasses"
 			:style="{
 				borderBottom: mood
@@ -30,7 +31,7 @@ const dividerClasses = computed(() => {
 		orientation === 'horizontal'
 			? 'w-full h-[1px]'
 			: 'absolute top-0 h-full w-[1px] border-r border-b-none',
-		`divider__${mood}`,
+			mood && `divider__${mood}`,
 	];
 });
 </script>
