@@ -7,7 +7,7 @@
 			type="text"
 			placeholder="Search..."
 			class="w-full p-2 rounded-md"
-			@update="($event) => (search = $event.target.value)" />
+			@update:model-value="(value: string) => search = value" />
 
 		<div class="grid grid-cols-2 gap-10 w-full">
 			<RouterLink

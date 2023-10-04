@@ -1,11 +1,17 @@
 <template>
-	<input v-model="modelValue" type="text" placeholder="Search a component" class="input" />
+	<input
+		:value="modelValue"
+		type="text"
+		placeholder="Search a component"
+		class="input"
+		@input="($event) => $emit('update:modelValue', ($event.target as HTMLInputElement)?.value)" />
 </template>
 
 <script setup lang="ts">
-import { defineModel } from 'vue';
-
-const modelValue = defineModel();
+const { modelValue } = defineProps<{
+	modelValue: string;
+}>();
+defineEmits(['update:modelValue']);
 </script>
 
 <style lang="scss" scoped>
