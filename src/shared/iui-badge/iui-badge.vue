@@ -1,14 +1,14 @@
 <template>
 	<div class="relative">
 		<div class="relative">
-			<div :class="`badge ${dot ? 'badge__dotted' : ''}`" :style="{ background: color }">
+			<div data-testid="iui-badge__inner" :class="`badge ${dot ? 'badge__dotted' : ''}`" :style="{ background: color }">
 				<div v-if="!dot && content" class="text-sm">
 					<small>{{ getFormattedContent }}</small>
 				</div>
 			</div>
 		</div>
 		<slot v-if="!icon" />
-		<div v-else class="">
+		<div v-else data-testid="iui-badge__icon">
 			<Icon :icon="icon" />
 		</div>
 	</div>

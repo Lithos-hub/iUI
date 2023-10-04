@@ -1,5 +1,6 @@
 <template>
 	<div
+		data-testid="iui-avatar__wrapper"
 		:class="`rounded-full relative overflow-hidden border border-slate-200/10`"
 		:style="{
 			width: `${computedSize}px`,
@@ -19,10 +20,10 @@
 				backgroundColor: getTailwindColor(color) as string,
 			}">
 			<div v-if="text">
-				<span class="text-white">{{ text }}</span>
+				<span data-testid="iui-avatar__text" class="text-white">{{ text }}</span>
 			</div>
 			<div v-else-if="icon">
-				<Icon :icon="icon" :size="computedSize" color="white" />
+				<Icon data-testid="iui-avatar__icon" :icon="icon" :size="computedSize" color="white" />
 			</div>
 		</span>
 	</div>

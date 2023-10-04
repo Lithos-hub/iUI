@@ -1,5 +1,7 @@
 <template>
 	<button
+		:disabled="disabled"
+		data-testid="iui-button"
 		:class="`button button__${computedColor} button__${size} button__radius--${radius} button__${variant}`">
 		<slot v-if="!text" class="button__slot"></slot>
 		<span v-else>{{ text }}</span>
@@ -135,7 +137,7 @@ const computedColor = computed(() => {
 	}
 
 	&__disabled {
-		@apply bg-slate-600 text-slate-400 cursor-default hover:opacity-100 active:scale-100 active:brightness-100;
+		@apply bg-slate-600 text-slate-400 hover:opacity-100 active:scale-100 active:brightness-100;
 	}
 
 	&__xs {

@@ -2,7 +2,7 @@ import { render } from '@testing-library/vue';
 import IuiAlert from './iui-alert.vue';
 import { nextTick } from 'vue';
 
-const getRender = (props = {}) => render(IuiAlert, {
+const getRender = ({ ...props }) => render(IuiAlert, {
         props,
     });
 
@@ -13,9 +13,8 @@ describe('Given iui-alert component', () => {
                 open: true,
             });
             nextTick(() => {
-                const alert = getByTestId('iui-alert__wrapper');
-                console.log('CLASSES => ', alert.getAttribute('class'));
-                expect(alert.getAttribute('class')).toContain('alert__wrapper--opened');
+                const wrapper = getByTestId('iui-alert__wrapper');
+                expect(wrapper.getAttribute('class')).toContain('alert__wrapper--opened');
             })
         });
     })
@@ -25,18 +24,18 @@ describe('Given iui-alert component', () => {
             const { getByTestId } = getRender({
                 open: false,
             });
-            const alert = getByTestId('iui-alert__wrapper');
+            const wrapper = getByTestId('iui-alert__wrapper');
             nextTick(() => {
-                expect(alert.getAttribute('class')).toContain('alert__wrapper--closed');
+                expect(wrapper.getAttribute('class')).toContain('alert__wrapper--closed');
             })
         });
     })
 
     describe('When no type prop is provided', () => {
         it('Then it should render the default alert type', () => {
-            const { getByTestId } = getRender();
-            const alert = getByTestId('iui-alert');
-            expect(alert.getAttribute('class')).toContain('alert__default');
+            const { getByTestId } = getRender({});
+            const wrapper = getByTestId('iui-alert');
+            expect(wrapper.getAttribute('class')).toContain('alert__default');
         });
     });
     
