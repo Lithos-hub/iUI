@@ -1,13 +1,13 @@
 <template>
 	<div ref="slotRef" class="skeleton__wrapper flex flex-col gap-5">
 		<div v-for="(slot, i) of distribution" :key="i" :class="slot !== 'list' && slot !== 'table' && `skeleton skeleton__${slot}` ">
-			<div v-if="slot === 'list'" class="flex flex-col gap-2 p-2">
-				<div class="skeleton skeleton__list-item bg-dark/50 rounded-full" />
-				<div class="skeleton skeleton__list-item bg-dark/50 rounded-full" />
-				<div class="skeleton skeleton__list-item bg-dark/50 rounded-full" />
+			<div v-if="slot === 'list'" data-testid="iui-skeleton__list" class="flex flex-col gap-2 p-2">
+				<div  class="skeleton skeleton__list--item bg-dark/50 rounded-full" />
+				<div  class="skeleton skeleton__list--item bg-dark/50 rounded-full" />
+				<div  class="skeleton skeleton__list--item bg-dark/50 rounded-full" />
 			</div>
-			<div v-if="slot === 'table'" class="skeleton grid grid-cols-3 gap-1 p-1">
-				<div v-for="n in 9" :key="n" class="skeleton__list-item bg-dark/50 p-5 rounded-md" />
+			<div v-if="slot === 'table'" data-testid="iui-skeleton__table" class="skeleton grid grid-cols-3 gap-1 p-1">
+				<div v-for="n in 9" :key="n" class="skeleton__table--item bg-dark/50 p-5 rounded-md" />
 			</div>
 			<div v-else>
 				<slot :name="slot" />
