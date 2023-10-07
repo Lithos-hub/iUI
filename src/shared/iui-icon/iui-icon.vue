@@ -3,6 +3,7 @@
 		<svg
 			id="bundle"
 			ref="svg"
+			data-testid="iui-icon"
 			version="1.1"
 			xmlns="http://www.w3.org/2000/svg"
 			fill="none"

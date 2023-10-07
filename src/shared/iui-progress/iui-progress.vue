@@ -1,14 +1,16 @@
 <template>
 	<div class="flex items-center gap-5 rounded-full w-full overflow-hidden my-5">
 		<div
+			data-testid="iui-progress__indeterminate"
 			:class="`progress w-full ${displayValue ? 'h-2' : 'h-1'} ${
 				indeterminate && 'progress__indeterminate'
 			}`"
 			:style="!indeterminate ? computedDefault : {}" />
 		<div
 			v-if="displayValue && !indeterminate"
+			data-testid="iui-progress__value"
 			class="progress__value flex flex-col justify-center items-center h-4">
-			<small class="text-xs text-white bg-[#202020] min-w-[50px] text-center">{{ value }}%</small>
+			<small data-testid="iui-progress__value--inner" class="text-xs text-white bg-[#202020] min-w-[50px] text-center">{{ value }}%</small>
 		</div>
 	</div>
 </template>
@@ -19,10 +21,11 @@ import { computed } from 'vue';
 import { getTailwindColor } from '@/utils';
 import { Progress } from './iui-progress.interfaces';
 
-const { indeterminate, value, color } = withDefaults(defineProps<Progress>(), {
+const { indeterminate, value, color, displayValue } = withDefaults(defineProps<Progress>(), {
 	indeterminate: false,
 	value: 10,
 	color: 'white',
+	displayValue: true,
 });
 
 const computedDefault = computed(() => {
