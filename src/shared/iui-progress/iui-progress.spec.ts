@@ -1,6 +1,5 @@
 import { render } from '@testing-library/vue';
 import IuiProgress from './iui-progress.vue';
-import { getTailwindColor } from '@/utils';
 
 const getWrapper = ({ ...props }) =>
 	render(IuiProgress, {
