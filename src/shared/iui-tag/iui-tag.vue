@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div :class="`tag tag__${variant} ${closable && 'active:scale-110'}`">
+		<div data-testid="iui-tag" :class="`tag tag__${variant} ${closable && 'active:scale-110'}`">
 			<Icon v-if="prependIcon" :icon="prependIcon" :color="computedVariantColor" class="h-6 w-6" />
 			<small>
 				<slot v-if="!content" />
@@ -9,6 +9,7 @@
 			<Icon v-if="appendIcon && !closable" :icon="appendIcon" :color="computedVariantColor" class="h-6 w-6" />
             <Icon
                 v-if="closable"
+                data-testid="iui-tag__close"
                 icon="close"
                 class="h-5 w-5 hover:cursor-pointer rounded-full hover:bg-slate-300/50 transition-all"
                 @click="$emit('close')"/>
