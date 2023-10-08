@@ -1,5 +1,6 @@
 import { TAILWIND_COLORS } from '@/constants/colors';
 import { ColorName, TailwindColors } from '@/interfaces';
+import { RGB } from './color.interfaces';
 
 export const getTailwindColor = (color: ColorName, shade?: string | number): string => {
 	if (color === 'black' || color === 'white') return TAILWIND_COLORS[color] as string;
@@ -8,7 +9,7 @@ export const getTailwindColor = (color: ColorName, shade?: string | number): str
 	return colorValue[(shade ? shade.toString() : '500') as keyof typeof colorValue] as string;
 };
 
-export const hexToRgb = (hex: string) => {
+export const hexToRgb = (hex: string): RGB | null => {
 	const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
 	return result
 		? {

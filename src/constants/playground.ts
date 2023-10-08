@@ -20,8 +20,17 @@ import { Progress } from '@/shared/iui-progress/iui-progress.interfaces';
 import { Spinner } from '@/shared/iui-spinner/iui-spinner.interfaces';
 import { Skeleton } from '@/shared/iui-skeleton/iui-skeleton.interfaces';
 
-
-type ComponentProps = Button | Icon | Badge | Avatar | Divider | Tag | Alert | Progress | Spinner | Skeleton;
+type ComponentProps =
+	| Button
+	| Icon
+	| Badge
+	| Avatar
+	| Divider
+	| Tag
+	| Alert
+	| Progress
+	| Spinner
+	| Skeleton;
 
 type Component =
 	| typeof ButtonComponent
@@ -194,7 +203,7 @@ export const playgroundComponents: PlaygroundComponent[] = [
 			{
 				component: TagComponent,
 				props: {
-					content: 'Item 1',
+					content: 'Selected item',
 					variant: 'primary',
 					closable: true,
 				},
@@ -204,12 +213,13 @@ export const playgroundComponents: PlaygroundComponent[] = [
 				props: {
 					variant: 'success',
 					content: 'Likes',
+					appendIcon: 'heart',
 				},
 			},
 			{
 				component: TagComponent,
 				props: {
-					content: 'Show items',
+					content: 'Show products',
 					appendIcon: 'shopingCart',
 					variant: 'secondary',
 				},
@@ -310,5 +320,5 @@ export const playgroundComponents: PlaygroundComponent[] = [
 				},
 			},
 		],
-	}
+	},
 ];

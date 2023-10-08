@@ -1,12 +1,14 @@
 <template>
 	<div class="relative">
 		<div
+			data-testid="iui-spinner"
 			:class="`spinner min-h-[75px] min-w-[75px] spinner__indeterminate`"
 			:style="{
 				borderTop: `4px solid ${computedColor}`,
 			}" />
 		<div v-if="displayText" class="spinner__value">
 			<small
+				data-testid="iui-spinner__text"
 				:class="`text-xs min-w-[50px] text-center`"
 				:style="{
 					color: computedTextColor,
