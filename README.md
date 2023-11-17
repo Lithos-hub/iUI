@@ -52,32 +52,6 @@ npm run test:unit
 | Tag            | ![ReadyBtn] |
 | Tooltip        | ![WipBtn]   |
 
-| Component (Navigation) | Status    |
-| ---------------------- | --------- |
-| Breadcrumb             | ![WipBtn] |
-| Menu                   | ![WipBtn] |
-| Navbar                 | ![WipBtn] |
-| Pagination             | ![WipBtn] |
-| Sidebar                | ![WipBtn] |
-| Steps                  | ![WipBtn] |
-| Tabs                   | ![WipBtn] |
-| Timeline               | ![WipBtn] |
-
-| Component (Form) | Status    |
-| ---------------- | --------- |
-| Checkbox         | ![WipBtn] |
-| Datepicker       | ![WipBtn] |
-| Dropdown         | ![WipBtn] |
-| Form             | ![WipBtn] |
-| Input            | ![WipBtn] |
-| Radio            | ![WipBtn] |
-| Select           | ![WipBtn] |
-| Slider           | ![WipBtn] |
-| Switch           | ![WipBtn] |
-| Textarea         | ![WipBtn] |
-| Timepicker       | ![WipBtn] |
-| Upload           | ![WipBtn] |
-
 ## Recommended IDE Setup
 
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
