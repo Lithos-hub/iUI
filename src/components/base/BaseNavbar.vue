@@ -1,18 +1,12 @@
 <template>
 	<nav
-		class="py-3 px-5 flex items-center border-b border-b-slate-50/10 bg-dark/50 justify-between backdrop-blur relative text-primary">
-		<div class="border__synth--light my-1 py-1 px-2.5 ml-5 bg-dark text-white rounded-full">
-			<small>v{{ version }}</small>
-		</div>
-
-		<div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
-			<RouterLink to="/">
-				<h2 class="text-3xl">
-					<span>I</span>
-					<span class="text-red-500">UI</span>
-				</h2>
-			</RouterLink>
-		</div>
+		class="py-3 px-5 flex justify-between items-center border-b border-b-slate-50/10 bg-dark/50 backdrop-blur relative text-primary">
+		<RouterLink to="/">
+			<h2 class="text-3xl">
+				<span>I</span>
+				<span class="text-red-500">UI</span>
+			</h2>
+		</RouterLink>
 
 		<div class="flex flex-row justify-around">
 			<RouterLink
@@ -35,7 +29,6 @@
 
 <script lang="ts" setup>
 import Button from '@/shared/iui-button/iui-button.vue';
-const version = '0.4.0';
 
 const menuItems = [
 	{

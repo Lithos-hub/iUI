@@ -5,8 +5,6 @@
 	</div>
 </template>
 
-<script setup lang="ts"></script>
-
 <style scoped>
 .background__static {
 	@apply fixed top-0 left-0 w-full h-full -z-50;

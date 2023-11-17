@@ -233,7 +233,6 @@ export const playgroundComponents: PlaygroundComponent[] = [
 			{
 				component: ProgressComponent,
 				props: {
-					value: 50,
 					color: 'blue',
 				},
 			},

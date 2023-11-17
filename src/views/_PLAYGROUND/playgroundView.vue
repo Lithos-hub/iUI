@@ -1,6 +1,6 @@
 <template>
 	<section class="flex flex-col gap-5 items-center">
-		<h2 class="text-3xl font-bold">IUI Playground Components</h2>
+		<h2 class="text-3xl font-bold text-center">IUI Playground Components</h2>
 
 		<Input
 			v-model="search"
@@ -9,7 +9,7 @@
 			class="w-full p-2 rounded-md"
 			@update:model-value="(value: string) => search = value" />
 
-		<div class="grid grid-cols-2 gap-10 w-full">
+		<div v-if="filteredComponents.length" class="grid grid-cols-2 gap-10 w-full">
 			<RouterLink
 				v-for="({ components, category, to }, i) of filteredComponents"
 				:key="i"
@@ -45,6 +45,9 @@
 					</template>
 				</Card>
 			</RouterLink>
+		</div>
+		<div v-else class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full">
+			<h2 class="text-2xl text-red-500">No components found</h2>
 		</div>
 	</section>
 </template>

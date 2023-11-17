@@ -25,7 +25,7 @@ const { indeterminate, value, color, displayValue } = withDefaults(defineProps<P
 	indeterminate: false,
 	value: 10,
 	color: 'white',
-	displayValue: true,
+	displayValue: false,
 });
 
 const computedDefault = computed(() => {
